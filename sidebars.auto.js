@@ -128,7 +128,8 @@ module.exports = {
                         "type": "category",
                         "label": "cloud",
                         "items": [
-                            "websites/sharepoint/cloud/file-handler"
+                            "websites/sharepoint/cloud/file-handler-dotnetfx-install",
+                            "websites/sharepoint/cloud/file-handler-net5-install"
                         ]
                     },
                     {
@@ -175,26 +176,7 @@ module.exports = {
                 "type": "category",
                 "label": "Flavor OVA",
                 "items": [
-                    "flavors/flavor-a/automated-setup",
-                    "flavors/flavor-a/faq",
-                    "flavors/flavor-a/manual-setup-aws",
-                    "flavors/flavor-a/overview",
-                    {
-                        "type": "category",
-                        "label": "release-notes",
-                        "items": [
-                            {
-                                "type": "category",
-                                "label": "0_x",
-                                "items": [
-                                    "flavors/flavor-a/release-notes/0_x/0_1"
-                                ]
-                            },
-                            "flavors/flavor-a/release-notes/history"
-                        ]
-                    },
-                    "flavors/flavor-a/technical-architecture",
-                    "flavors/flavor-a/testing"
+                    "flavors/flavor-a/manual-setup-aws"
                 ]
             },
             {
@@ -208,26 +190,8 @@ module.exports = {
                 "type": "category",
                 "label": "flavor-ova",
                 "items": [
-                    "flavors/flavor-ova/automated-setup",
-                    "flavors/flavor-ova/faq",
-                    "flavors/flavor-ova/manual-setup-aws",
                     "flavors/flavor-ova/manual-setup-azure",
                     "flavors/flavor-ova/overview",
-                    {
-                        "type": "category",
-                        "label": "release-notes",
-                        "items": [
-                            {
-                                "type": "category",
-                                "label": "0_x",
-                                "items": [
-                                    "flavors/flavor-ova/release-notes/0_x/0_1"
-                                ]
-                            },
-                            "flavors/flavor-ova/release-notes/history"
-                        ]
-                    },
-                    "flavors/flavor-ova/technical-architecture",
                     "flavors/flavor-ova/testing"
                 ]
             }
