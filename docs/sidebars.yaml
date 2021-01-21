@@ -1,0 +1,20 @@
+- dashboards: 
+  - Dashboards: 0
+  - client-welcome: Client Welcome
+  - websites: Websites
+
+- esxi: 
+  - ESXI: 1
+  - welcome: Welcome
+  - architecture: Architecture
+  - ovas: OVAs
+  - websites: Websites
+
+- aws: 
+  - AWS: 2
+  
+- websites:
+  - Websites: 3
+
+- kb:
+  - Knowledge Base: 4

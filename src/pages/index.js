@@ -277,22 +277,18 @@ function Home() {
       </Ticker> */}
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
-          {/* <h1 className="hero__title">{siteConfig.title}</h1> */}
-          <h1 className="hero__title">Trust Every File.</h1>
-          {/* <p className="hero__subtitle">{siteConfig.tagline}</p> */}
-          <p className="hero__subtitle">We are a file regeneration and analytics company, and a leader 
-          in the field of CDR: Content Disarm and Reconstruction</p>
-          {trustButton && trustButton.length > 0 && (
-            <section className={styles.features}>
-              <div className="container">
-                <div className="row">
-                  {trustButton.map((props, idx) => (
-                    <ShowButton key={idx} {...props} />
-                  ))}
-                </div>
-              </div>
-            </section>
-          )}
+          <h1 className="hero__title">{siteConfig.title}</h1>
+          <p className="hero__subtitle">{siteConfig.tagline}</p>
+          <div className={styles.buttons}>
+            <Link
+              className={clsx(
+                'button button--outline button--secondary button--lg',
+                styles.getStarted,
+              )}
+              to={useBaseUrl('docs/dashboards/client-welcome/index')}>
+              Get Started
+            </Link>
+          </div>
         </div>
       </header>
       <main>
@@ -350,3 +346,4 @@ function Home() {
 }
 
 export default Home;
+

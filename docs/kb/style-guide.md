@@ -65,7 +65,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 [I'm a reference-style link][arbitrary case-insensitive reference text]
 
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
+[I'm a relative reference to a repository file](../../.gitignore)
 
 [You can use numbers for reference-style link definitions][1]
 
@@ -200,3 +200,11 @@ This is a caution
 This is a warning
 
 :::
+
+
+
+## Angle Brackets
+Docusaurus MD files are churned into HTML, and it uses strict XHTML for this.
+Any markup tag not closed will throw a build error.
+You can use angle brackets within script blocks, but not with out.
+Sumply use a replacement such as square brackers when needed

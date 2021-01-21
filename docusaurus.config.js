@@ -20,7 +20,7 @@ module.exports = {
       },
       items: [
         {
-          to: "docs/dashboards/websites/production",
+          to: "docs/dashboards/client-welcome/index",
           activeBasePath: "docs",
           label: "Documentation",
           position: "left",
@@ -63,12 +63,15 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
+          sidebarPath: require.resolve("./sidebars.auto.js"),
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
       },
     ],
+  ],
+  plugins: [
+    'docusaurus-plugin-auto-sidebars',    
   ],
 };
