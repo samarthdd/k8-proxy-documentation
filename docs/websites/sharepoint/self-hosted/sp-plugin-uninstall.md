@@ -34,6 +34,11 @@ Locate the downloaded file through SharePoint 2019 Management Shell and run belo
 
 ![](../../../../static/img/docs/websites/sharepoint/self-hosted/image032.png)
 
+If the error 'PSSECURITYEXCEPTION' occurs, then do as below:
+With PowerShell, you must ensure Get-ExecutionPolicy is not Restricted. We suggest using Bypass to bypass the policy to get things installed or AllSigned for quite a bit more security.
+Run Get-ExecutionPolicy. If it returns Restricted, then run Set-ExecutionPolicy AllSigned or Set-ExecutionPolicy Bypass -Scope Process.
+see [https://go.microsoft.com/fwlink/?LinkID=135170](https://go.microsoft.com/fwlink/?LinkID=135170)
+
 Once, the cmdlet ran successfully. Validate the SharePoint Plugin running below cmdlet.
 
 '_ **Get-SPSolution** _'

@@ -57,10 +57,14 @@ Ex: cd C:\Users\USERNAME\Downloads\Glasswall.FileHandler and change the director
 
 7. Type the file name InstallFileHandler.ps1 and press enter to install the wsp. This command will install and activate all the feature.
 
-![](../../../../static/img/docs/websites/sharepoint/self-hosted/install-7.png)
+![https://go.microsoft.com/fwlink/?LinkID=135170](../../../../static/img/docs/websites/sharepoint/self-hosted/install-7.png)
+
+If the error 'PSSECURITYEXCEPTION' occurs, then do as below:
+With PowerShell, you must ensure Get-ExecutionPolicy is not Restricted. We suggest using Bypass to bypass the policy to get things installed or AllSigned for quite a bit more security.
+Run Get-ExecutionPolicy. If it returns Restricted, then run Set-ExecutionPolicy AllSigned or Set-ExecutionPolicy Bypass -Scope Process.
+see [](https://go.microsoft.com/fwlink/?LinkID=135170)
 
 After successful installation, the features will be activated.
-
 
 [Watch the video](../../../../static/video/docs/websites/sharepoint/self-hosted/wsp-install.mp4)
 

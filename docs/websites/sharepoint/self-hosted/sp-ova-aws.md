@@ -56,16 +56,16 @@ After uploading the OVA file, now it's time to import it for the Virtual Instant
 
 ```
 {
-    'Version': '2012-10-17',
-    'Statement': 
+    "Version": "2012-10-17",
+    "Statement": 
     [
         {
-            'Effect': 'Allow',
-            'Principal': { 'Service': 'vmie.amazonaws.com' },
-            'Action': 'sts:AssumeRole',
-            'Condition': {
-                'StringEquals':{
-                    'sts:Externalid': 'vmimport'
+            "Effect": "Allow",
+            "Principal": { "Service": "vmie.amazonaws.com" },
+            "Action": "sts:AssumeRole",
+            "Condition": {
+                "StringEquals":{
+                    "sts:Externalid": "vmimport"
                 }
             }
         }
@@ -83,30 +83,30 @@ aws iam create-role --role-name vmimport --assume-role-policy-document 'file://f
 
 ```
 {
-    Version':'2012-10-17',
-    'Statement':[
+    "Version":"2012-10-17",
+    "Statement":[
             {
-            'Effect':'Allow',
-            'Action':[
-                's3:GetBucketLocation',
-                's3:GetObject',
-                's3:ListBucket'
+            "Effect":"Allow",
+            "Action":[
+                "s3:GetBucketLocation",
+                "s3:GetObject",
+                "s3:ListBucket"
             ],
 
-            'Resource':[
-            'arn:aws:s3:::spserverova',
-            'arn:aws:s3:::spserverova/\*'
+            "Resource":[
+            "arn:aws:s3:::spserverova",
+            "arn:aws:s3:::spserverova/*"
             ]
         },
         {
-        'Effect':'Allow',
-        'Action':[
-            'ec2:ModifySnapshotAttribute',
-            'ec2:CopySnapshot',
-            'ec2:RegisterImage',
-            'ec2:Describe\*'
+        "Effect":"Allow",
+        "Action":[
+            "ec2:ModifySnapshotAttribute",
+            "ec2:CopySnapshot",
+            "ec2:RegisterImage",
+            "ec2:Describe*"
         ],
-        'Resource':'\*'
+        "Resource":"*"
         }
     ]
 }
@@ -123,11 +123,11 @@ aws iam put-role-policy --role-name vmimport --policy-name vmimport --policy-doc
 ```
 [
     {
-        'Description': 'SP Server OVA',
-        'Format': 'ova',
-        'UserBucket': {
-            'S3Bucket': 'spserverova',
-            'S3Key': 'sp-svr-vm.ova'
+        "Description": "SP Server OVA",
+        "Format": "ova",
+        "UserBucket": {
+            "S3Bucket": "spserverova",
+            "S3Key": "sp-svr-vm.ova"
         }
     }
 ]
@@ -140,6 +140,43 @@ aws iam put-role-policy --role-name vmimport --policy-name vmimport --policy-doc
 aws ec2 import-image --description 'SP Server OVA' --disk-containers 'file://f:\vhd01\container.json'
 
 ![](../../../../static/img/docs/websites/sharepoint/self-hosted/image019.png)
+
+
+If this succeeds, go to point 7.
+
+If you encounter the error '(InvalidParameter) when calling the ImportImage operation: User does not have access to the S3 object.'
+Then you'll need to get a session token with the following command
+
+```
+aws sts get-session-token --serial-number arn:aws:iam::{your_aws_user_id}:mfa/{your_aws_user_name} --token-code {your_aws_mfa_code}
+```
+
+this returns a token as per below:
+
+```
+{
+    "Credentials": {
+        "AccessKeyId": "AccessKeyId",
+        "SecretAccessKey": "SecretAccessKey",
+        "SessionToken": "SessionToken",
+        "Expiration": "Expiration"
+    }
+}
+```
+
+run the commands below, replacing the values from the token values you just got:
+
+```
+export AWS_ACCESS_KEY_ID={AccessKeyId}
+export AWS_SECRET_ACCESS_KEY={SecretAccessKey}
+export AWS_SESSION_TOKEN={SessionToken}
+```
+
+Then run again the below, and all should be ok.
+
+```
+aws ec2 import-image --description 'SP Server OVA' --disk-containers 'file://f:\vhd01\container.json'
+```
 
   7. You can check the status of the of importing image using below cmdlet
 
