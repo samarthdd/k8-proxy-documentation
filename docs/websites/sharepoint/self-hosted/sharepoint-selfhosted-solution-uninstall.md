@@ -46,3 +46,7 @@ see [https://go.microsoft.com/fwlink/?LinkID=135170](https://go.microsoft.com/fw
 8. This time it should not prompt for the FileHandlerV1.wsp
 
 ![](../../../../static/img/docs/websites/sharepoint/self-hosted/image033.png)
+
+
+#### Resources
+- [Watch the video](../../../../static/video/docs/websites/sharepoint/self-hosted/SharePoint-SelfHosted-Installation.mp4)

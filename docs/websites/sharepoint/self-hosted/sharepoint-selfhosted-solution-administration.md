@@ -9,3 +9,6 @@ sidebar_label: Sharepoint Self-Hosted  Solution Administration
 2. Click on the Glasswall section on the left hand menu.
 3. Set the Glasswall Rebuild API URL & Access Key. 
 4. Save the configuration.
+
+#### Resources
+- [Watch the video](../../../../static/video/docs/websites/sharepoint/self-hosted/SharePoint-SelfHosted-Administration.mp4)

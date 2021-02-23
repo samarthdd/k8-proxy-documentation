@@ -93,7 +93,7 @@ see [](https://go.microsoft.com/fwlink/?LinkID=135170)
 #### Repository
 - SharePoint SelfHosted - Solution : [https://github.com/k8-proxy/gp-sharepoint-plugins/tree/main/SelfHosted/src](https://github.com/k8-proxy/gp-sharepoint-plugins/tree/main/SelfHosted/src)
 
-#### Further Resources
+#### Resources
 - [Plugin Brochure](https://github.com/k8-proxy/gp-sharepoint-plugins/blob/main/SelfHosted/doc/SharePointCloudPlugin-v1.pdf)
 
-- [Watch the video](../../../../static/video/docs/websites/sharepoint/self-hosted/wsp-install.mp4)
+- [Watch the video](../../../../static/video/docs/websites/sharepoint/self-hosted/SharePoint-SelfHosted-Installation.mp4)
