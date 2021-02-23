@@ -9,16 +9,16 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165717322-1"></script>
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-165717322-1",{})</script>
 <link rel="search" type="application/opensearchdescription+xml" title="K8 Proxy Documentation" href="/k8-proxy-documentation/opensearch.xml"><title data-react-helmet="true">Sharepoint Cloud File Handler - .NET 5 | K8 Proxy Documentation</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" name="docsearch:language" content="en"><meta data-react-helmet="true" name="docsearch:version" content="current"><meta data-react-helmet="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-react-helmet="true" property="og:title" content="Sharepoint Cloud File Handler - .NET 5 | K8 Proxy Documentation"><meta data-react-helmet="true" name="description" content="Glasswall File Handler for Download in Office 365"><meta data-react-helmet="true" property="og:description" content="Glasswall File Handler for Download in Office 365"><meta data-react-helmet="true" property="og:url" content="https://k8-proxy.github.io/k8-proxy-documentation/docs/websites/sharepoint/cloud/file-handler-net5-install"><link data-react-helmet="true" rel="shortcut icon" href="/k8-proxy-documentation/img/favicon.ico"><link data-react-helmet="true" rel="preconnect" href="https://BH4D9OD16A-dsn.algolia.net" crossorigin="anonymous"><link data-react-helmet="true" rel="canonical" href="https://k8-proxy.github.io/k8-proxy-documentation/docs/websites/sharepoint/cloud/file-handler-net5-install"><link rel="stylesheet" href="/k8-proxy-documentation/styles.209888ae.css">
-<link rel="preload" href="/k8-proxy-documentation/styles.a182ab4d.js" as="script">
-<link rel="preload" href="/k8-proxy-documentation/runtime~main.65ea99e8.js" as="script">
-<link rel="preload" href="/k8-proxy-documentation/main.53f42ade.js" as="script">
-<link rel="preload" href="/k8-proxy-documentation/1.08f04cd7.js" as="script">
-<link rel="preload" href="/k8-proxy-documentation/2.3ab5be39.js" as="script">
-<link rel="preload" href="/k8-proxy-documentation/53.6901a386.js" as="script">
-<link rel="preload" href="/k8-proxy-documentation/56.62d89f1d.js" as="script">
-<link rel="preload" href="/k8-proxy-documentation/935f2afb.6a2dbc94.js" as="script">
-<link rel="preload" href="/k8-proxy-documentation/17896441.7dead840.js" as="script">
-<link rel="preload" href="/k8-proxy-documentation/4c246f2a.83a022eb.js" as="script">
+<link rel="preload" href="/k8-proxy-documentation/styles.9b2aba22.js" as="script">
+<link rel="preload" href="/k8-proxy-documentation/runtime~main.7ea54233.js" as="script">
+<link rel="preload" href="/k8-proxy-documentation/main.7f31a735.js" as="script">
+<link rel="preload" href="/k8-proxy-documentation/1.467bb199.js" as="script">
+<link rel="preload" href="/k8-proxy-documentation/2.eb712d44.js" as="script">
+<link rel="preload" href="/k8-proxy-documentation/53.7173129d.js" as="script">
+<link rel="preload" href="/k8-proxy-documentation/56.bf4e75a4.js" as="script">
+<link rel="preload" href="/k8-proxy-documentation/935f2afb.d8867f8c.js" as="script">
+<link rel="preload" href="/k8-proxy-documentation/17896441.4f1efdcd.js" as="script">
+<link rel="preload" href="/k8-proxy-documentation/4c246f2a.10aa4e97.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()</script><div id="__docusaurus">
@@ -31,15 +31,15 @@ You may need to close your browser and open it again before the file handler wil
 Select a file (click the check) and then in the toolbar, click <code>Download (Glasswall)</code>.
 This will launch the file handler&#x27;s custom action handler and download the file.
 The file handler code will download the file, rebuild it using Glasswall rebuild api, and download the file to your browser.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="related-references"></a>Related references<a aria-hidden="true" tabindex="-1" class="hash-link" href="#related-references" title="Direct link to heading">#</a></h2><p>For more information about file handlers, check out the <a href="https://dev.onedrive.com" target="_blank" rel="noopener noreferrer">OneDrive developer portal</a>.</p><p>For more information about Microsoft Graph API, see <a href="https://graph.microsoft.com" target="_blank" rel="noopener noreferrer">Microsoft Graph</a>.</p></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/k8-proxy-documentation/docs/websites/sharepoint/cloud/file-handler-dotnetfx-install"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« Sharepoint Cloud File Handler - .NET Framework</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/k8-proxy-documentation/docs/websites/sharepoint/self-hosted/export-ova-aws"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Export OVA from AWS »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3SO_"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#getting-started" class="table-of-contents__link">Getting Started</a><ul><li><a href="#register-a-new-application" class="table-of-contents__link">Register a new application</a></li><li><a href="#register-the-file-handler-manifest" class="table-of-contents__link">Register the file handler manifest</a></li><li><a href="#update-appsettings-of-filehandler" class="table-of-contents__link">Update appsettings of FileHandler</a></li><li><a href="#run-the-project-and-sign-in" class="table-of-contents__link">Run the project and sign-in</a></li><li><a href="#navigate-to-onedrive-and-use-the-markdown-file-handler" class="table-of-contents__link">Navigate to OneDrive and use the Markdown file handler</a></li></ul></li><li><a href="#next-steps" class="table-of-contents__link">Next Steps</a><ul><li><a href="#download-glasswall" class="table-of-contents__link">Download (Glasswall)</a></li></ul></li><li><a href="#related-references" class="table-of-contents__link">Related references</a></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">Docs</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/k8-proxy-documentation/docs/dashboards/websites/production">Getting Started</a></li></ul></div></div><div class="text--center"><div>Copyright © 2021 Glasswall Solutions Ltd. Built with Docusaurus.</div></div></div></footer></div>
-<script src="/k8-proxy-documentation/styles.a182ab4d.js"></script>
-<script src="/k8-proxy-documentation/runtime~main.65ea99e8.js"></script>
-<script src="/k8-proxy-documentation/main.53f42ade.js"></script>
-<script src="/k8-proxy-documentation/1.08f04cd7.js"></script>
-<script src="/k8-proxy-documentation/2.3ab5be39.js"></script>
-<script src="/k8-proxy-documentation/53.6901a386.js"></script>
-<script src="/k8-proxy-documentation/56.62d89f1d.js"></script>
-<script src="/k8-proxy-documentation/935f2afb.6a2dbc94.js"></script>
-<script src="/k8-proxy-documentation/17896441.7dead840.js"></script>
-<script src="/k8-proxy-documentation/4c246f2a.83a022eb.js"></script>
+<script src="/k8-proxy-documentation/styles.9b2aba22.js"></script>
+<script src="/k8-proxy-documentation/runtime~main.7ea54233.js"></script>
+<script src="/k8-proxy-documentation/main.7f31a735.js"></script>
+<script src="/k8-proxy-documentation/1.467bb199.js"></script>
+<script src="/k8-proxy-documentation/2.eb712d44.js"></script>
+<script src="/k8-proxy-documentation/53.7173129d.js"></script>
+<script src="/k8-proxy-documentation/56.bf4e75a4.js"></script>
+<script src="/k8-proxy-documentation/935f2afb.d8867f8c.js"></script>
+<script src="/k8-proxy-documentation/17896441.4f1efdcd.js"></script>
+<script src="/k8-proxy-documentation/4c246f2a.10aa4e97.js"></script>
 </body>
 </html>
