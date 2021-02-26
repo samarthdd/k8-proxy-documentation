@@ -1,20 +1,20 @@
 ---
-title: SharePoint SelfHosted - Solution Deployment
-sidebar_label: SharePoint SelfHosted - Solution Deployment
+title: SharePoint Server - Solution Deployment
+sidebar_label: SharePoint Server - Solution Deployment
 ---
 
 
 This section will outline how to go about installing Glasswall SharePoint solutions to your environment. Glasswall SharePoint solution is offered in 2 flavors. They are:
 
-- **Glasswall - SharePoint Online - Solution** - [link](../cloud/sharepoint-online-solution-deployment.md)
-- **Glasswall - SharePoint SelfHosted - Solution**
+- **Glasswall - SharePoint Online - Solution** - [link](../online/sharepoint-online-solution-deployment.md)
+- **Glasswall - SharePoint Server - Solution**
 
 
-## Glasswall - SharePoint SelfHosted - Solution Deployment
+## Glasswall - SharePoint Server - Solution Deployment
 
 ### Overview
 
-The Sharepoint Self-Hosted plugin allows to delegate all download and uploads activities in the SharePoint User Interface to the GlassWall Rebuild engine. This keeps the all sharepoint documents safe.
+The Sharepoint Server plugin allows to delegate all download and uploads activities in the SharePoint User Interface to the GlassWall Rebuild engine. This keeps the all sharepoint documents safe.
 
 
 ### Installation Guide
@@ -25,18 +25,18 @@ This document provides the step-by-step installation guide. This installation pr
 
 
 1. Web Application level Feature Activation.
-![](../../../../static/img/docs/websites/sharepoint/self-hosted/install-1.png)
+![](../../../../static/img/docs/websites/sharepoint/server/install-1.png)
 
 2. Central Administration Feature for Custom Settings
-![](../../../../static/img/docs/websites/sharepoint/self-hosted/install-2.png)
+![](../../../../static/img/docs/websites/sharepoint/server/install-2.png)
 
 3. Web level document library Event Receiver
-![](../../../../static/img/docs/websites/sharepoint/self-hosted/install-3.png)
+![](../../../../static/img/docs/websites/sharepoint/server/install-3.png)
 
 
 #### Download Software
 1. Go to **GW GitHub Releases** page: [https://github.com/k8-proxy/gp-sharepoint-plugins/releases](https://github.com/k8-proxy/gp-sharepoint-plugins/releases).
-2. Download the latest release of **GW SP SelfHosted Solution** - **GWSharePointSolution.zip**.
+2. Download the latest release of **GW SP Server Solution** - **GWSharePointSolution.zip**.
 3. Unzip to a local folder. You will find a package **Glasswall.FileHandler.wsp** which needs to be deployed. You will also find install & removal PowerShell scripts which can be used.
  
 #### Installation Files
@@ -52,19 +52,19 @@ The zip file GWSharePointSolution.zip contains below files for the installation
 3. Locate the file InstallFileHandler.ps1. Copy the location.
 4. With Administrator privileges, click on Start->Microsoft SharePoint 2019 Products->SharePoint 2019 Management Shell. This will open the PowerShell terminal for SharePoint 2019
 
-![](../../../../static/img/docs/websites/sharepoint/self-hosted/install-4.png)
+![](../../../../static/img/docs/websites/sharepoint/server/install-4.png)
 
-![](../../../../static/img/docs/websites/sharepoint/self-hosted/install-5.png)
+![](../../../../static/img/docs/websites/sharepoint/server/install-5.png)
 
 5. In the command prompt paste the location of the Glasswall release folder.
     
 Ex: cd C:\Users\USERNAME\Downloads\Glasswall.FileHandler and change the directory to the location.
 
-![](../../../../static/img/docs/websites/sharepoint/self-hosted/install-6.png)
+![](../../../../static/img/docs/websites/sharepoint/server/install-6.png)
 
 6. Type the file name InstallFileHandler.ps1 and press enter to install the wsp. This command will install and activate all the feature.
 
-![https://go.microsoft.com/fwlink/?LinkID=135170](../../../../static/img/docs/websites/sharepoint/self-hosted/install-7.png)
+![https://go.microsoft.com/fwlink/?LinkID=135170](../../../../static/img/docs/websites/sharepoint/server/install-7.png)
 
 7. If the error 'PSSECURITYEXCEPTION' occurs, then do as below:
 With PowerShell, you must ensure Get-ExecutionPolicy is not Restricted. We suggest using Bypass to bypass the policy to get things installed or AllSigned for quite a bit more security.
@@ -80,7 +80,7 @@ see [](https://go.microsoft.com/fwlink/?LinkID=135170)
 4. Save the configuration.
 
 #### Verify Solution
-1. Navigate to your OnPrem/SelfHosted SharePoint site.
+1. Navigate to your OnPrem/Server SharePoint site.
 2. Open any Document Library.
 3. Select any file. 
 4. Download the file.
@@ -91,9 +91,9 @@ see [](https://go.microsoft.com/fwlink/?LinkID=135170)
 - Safari (Mac)
   
 #### Repository
-- SharePoint SelfHosted - Solution : [https://github.com/k8-proxy/gp-sharepoint-plugins/tree/main/SelfHosted/src](https://github.com/k8-proxy/gp-sharepoint-plugins/tree/main/SelfHosted/src)
+- SharePoint Server - Solution : [https://github.com/k8-proxy/gp-sharepoint-plugins/tree/main/Server/src](https://github.com/k8-proxy/gp-sharepoint-plugins/tree/main/Server/src)
 
 #### Resources
-- [Plugin Brochure](https://github.com/k8-proxy/gp-sharepoint-plugins/blob/main/SelfHosted/doc/SharePointCloudPlugin-v1.pdf)
+- [Plugin Brochure](https://github.com/k8-proxy/gp-sharepoint-plugins/blob/main/Server/doc/SharePointCloudPlugin-v1.pdf)
 
-- [Watch the video](../../../../static/video/docs/websites/sharepoint/self-hosted/SharePoint-SelfHosted-Installation.mp4)
+- [Watch the video](../../../../static/video/docs/websites/sharepoint/server/SharePoint-Server-Installation.mp4)

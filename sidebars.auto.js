@@ -126,30 +126,30 @@ module.exports = {
                 "items": [
                     {
                         "type": "category",
-                        "label": "cloud",
+                        "label": "online",
                         "items": [
-                            "websites/sharepoint/cloud/sharepoint-online-solution-administration",
-                            "websites/sharepoint/cloud/sharepoint-online-solution-deployment"
+                            "websites/sharepoint/online/sharepoint-online-solution-administration",
+                            "websites/sharepoint/online/sharepoint-online-solution-deployment"
                         ]
                     },
                     {
                         "type": "category",
-                        "label": "self-hosted",
+                        "label": "server",
                         "items": [
                             {
                                 "type": "category",
                                 "label": "server-setup",
                                 "items": [
-                                    "websites/sharepoint/self-hosted/server-setup/1. overview",
-                                    "websites/sharepoint/self-hosted/server-setup/2. sp-vm-manual-install",
-                                    "websites/sharepoint/self-hosted/server-setup/3. sp-vhd-to-ova",
-                                    "websites/sharepoint/self-hosted/server-setup/4. sp-ova-aws",
-                                    "websites/sharepoint/self-hosted/server-setup/5. export-ova-aws"
+                                    "websites/sharepoint/server/server-setup/1. overview",
+                                    "websites/sharepoint/server/server-setup/2. sp-vm-manual-install",
+                                    "websites/sharepoint/server/server-setup/3. sp-vhd-to-ova",
+                                    "websites/sharepoint/server/server-setup/4. sp-ova-aws",
+                                    "websites/sharepoint/server/server-setup/5. export-ova-aws"
                                 ]
                             },
-                            "websites/sharepoint/self-hosted/sharepoint-selfhosted-solution-administration",
-                            "websites/sharepoint/self-hosted/sharepoint-selfhosted-solution-deployment",
-                            "websites/sharepoint/self-hosted/sharepoint-selfhosted-solution-uninstall"
+                            "websites/sharepoint/server/sharepoint-server-solution-administration",
+                            "websites/sharepoint/server/sharepoint-server-solution-deployment",
+                            "websites/sharepoint/server/sharepoint-server-solution-uninstall"
                         ]
                     },
                     {

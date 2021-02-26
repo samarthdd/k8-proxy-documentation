@@ -45,7 +45,7 @@ Once the docker is running, it takes few minutes to initialize the server. Once 
 
   - Under profile, select "Node templates" and click on "Add template". Choose Amazon ec2 type for node template. 
 
-  - Under Account Access, Choose the region where k8s cluster needs to be deployed. Choose the cloud credentails that is created in step 2.
+  - Under Account Access, Choose the region where k8s cluster needs to be deployed. Choose the cloud credentials that is created in step 2.
 
   - Under Zone and Network, choose the Availability zone and the subnet where cluster nodes should be deployed. Then click next.
 

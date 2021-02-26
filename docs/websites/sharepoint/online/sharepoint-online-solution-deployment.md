@@ -6,7 +6,7 @@ sidebar_label: Sharepoint Online Solution Deployment
 This section will outline how to go about installing Glasswall SharePoint solutions to your environment. Glasswall SharePoint solution is offered in 2 flavors. They are:
 
 - **Glasswall - SharePoint Online - Solution**
-- **Glasswall - SharePoint SelfHosted - Solution** - [link](./../self-hosted/sharepoint-selfhosted-solution-deployment.md)
+- **Glasswall - SharePoint Server - Solution** - [link](./../server/sharepoint-server-solution-deployment.md)
 
 ## Glasswall - SharePoint Online - Solution Deployment
 

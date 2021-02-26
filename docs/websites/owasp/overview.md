@@ -145,7 +145,7 @@ OS: Centos
 Helm: 3.4.0
 Icap Flavor: Sow
 
-# Cloud Details
+# Online Details
 Hosted on AWS
 regions: eu-west1(Ireland)
 Instance Type: t3.2xlarge
