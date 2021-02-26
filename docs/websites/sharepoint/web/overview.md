@@ -1,5 +1,5 @@
 ---
-title: Sharepoint Cloud Overview
+title: Sharepoint Online Overview
 sidebar_label: Overview
 ---
 
