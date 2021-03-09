@@ -16,6 +16,14 @@ GW SPO solution consists of the following components:
 
 Both components need to be deployed to your environments (M365 + Azure) as described below.
 
+### Prerequsites
+
+- You have setup your Microsoft account (M365 + Azure).
+- You have setup [Azure subscription](https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/create-subscription).
+- Note: You can use 30-day free trial option by setting up account following [steps](https://signup.microsoft.com/Signup?OfferId=B07A1127-DE83-4a6d-9F85-2C104BDAE8B4&dl=ENTERPRISEPACK&culture=en-US&country=US&ali=1). This will setup both Sharepoint and Azure account, accessible on:
+    - Sharepoint: `https://<yourTenant>.sharepoint.com/`
+    - Azure: `https://portal.azure.com/`
+
 ### GW SPO Extension Deployment 
 Following are the steps to deploy GW SPO Extension:
 
@@ -25,15 +33,15 @@ Following are the steps to deploy GW SPO Extension:
 3. Unzip to a local folder. You will find a package "glasswall-hide-download-ext.sppkg" which needs to be deployed.
 
 #### Create App Catalog Site
-1. Go to the **SharePoint Admin Center** by entering the following URL in your browser. **https://{tenant}-admin.sharepoint.com**.
+1. Go to the **SharePoint Admin Center** by entering the following URL in your browser: **https://{tenant}-admin.sharepoint.com**, where {tenant} is string next to your domain (ex. `glasswall@share.onmicrosoft.com`, {tenant} is `share`)
 2. In the left sidebar, select **More features**.
 3. Locate the section **Apps** and select **Open**.
 4. On the **Apps** page, select **App Catalog**.
 5. Select **OK** to create a new app catalog site.
 6. On the next page, enter the following details:
   1. **Title**: Enter **App Catalog**.
-  2. **Web Site Address suffix**: Enter your preferred suffix for the app catalog; for example: **apps**.
-  3. **Administrator**: Enter your **username**, and then select the **resolve button** to resolve the username.
+  2. **Web Site Address suffix**: Enter your preferred suffix (at the empty field at the end of the line) for the app catalog; for example: **apps**.
+  3. **Administrator**: Enter your **username**, and then select to **Check Names** and resolve the username.
   4. Select **OK** to create the app catalog site.
 7. SharePoint creates the app catalog site, and you can see its progress in the SharePoint admin center.
 8. Click [here](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant#create-app-catalog-site) for more info.
@@ -42,16 +50,16 @@ Following are the steps to deploy GW SPO Extension:
 1. Open your tenant's **app catalog site** (i.e. https://{tenant}.sharepoint.com/sites/apps).
 2. Click on **Apps for SharePoint** on Left Navigation Menu.
 3. Click on **Upload**. Browse and select **glasswall-hide-download-ext.sppkg** package downloaded at earlier step from your local drive.
-4. Click on **Deploy** to deploy the solution tenant-wide.
+4. Check **Make this solution available to all sites in the organization** and click on **Deploy** to deploy the solution tenant-wide.
+5. Verify deployment ended without any issues (check the last column in the table on the current page). In case there were errors, delete uploaded package and try again.
 
 #### Verify Solution
 1. Navigate to SharePoint Online (O365) Site.
-2. Open any Document Library.
+2. Open any Document Library (make sure you have some files uploaded there).
 3. Select any file (click on the checkbox) and then in the toolbar, you will not see the default 'Download' button anymore.
 
 #### Repository
 - GW SPO Extension: [https://github.com/k8-proxy/gp-sharepoint-plugins/tree/main/Online/glasswall-hide-download-ext](https://github.com/k8-proxy/gp-sharepoint-plugins/tree/main/Online/glasswall-hide-download-ext)  
-
 
 
 ### GW FileHandler Web App Deployment
@@ -63,15 +71,17 @@ Following are the steps to deploy GW FileHandler web app:
 3. Unzip to a local folder. 
 
 #### Create FileHandler Web App
-1. Go to your Azure Portal.
+1. Go to your [Azure Portal](https://portal.azure.com/).
 2. Create a resource group. For r.g. rg-glasswallfilehandler-prod
-3. Create a new web app with appropriate plan. Example name for web app can be: **app-glasswallfilehandler-prod**. Once the web app is created, make a note of the URI. For e.g. https://app-glasswallfilehandler-prod.azurewebsites.net
+3. Create a new web app with appropriate plan by selecting resource group created in step 2, clicking on `Add` button in top toolbar and selecting `Web App` from the list.
+4. Carefully select proper plan. For test you can go with `Free sku and size`, last option.
+5. For runtime stack choose `.Net 5`
+6. Example name for web app can be: **app-glasswallfilehandler-prod**. Once the web app is created, make a note of the URI. For e.g. https://app-glasswallfilehandler-prod.azurewebsites.net
 
 #### Register a new application
 
+The following steps will allow you to register your file handler application.
 To register a new application with Azure Active Directory, log into your [**Azure Portal**](https://portal.azure.com).
-
-After logging into the Azure Portal, the following steps will allow you to register your file handler application:
 
 1. Navigate to the **Azure Active Directory** module.
 2. Select **App registrations** and click **New application registration**.
@@ -79,23 +89,22 @@ After logging into the Azure Portal, the following steps will allow you to regis
    2. Ensure **Application Type** is set to **Web app / API**
    3. Enter a sign-on URL for your application. This will be `https://app-glasswallfilehandler-prod.azurewebsites.net`.
    4. Click **Create** to create the app.
-3. After the app has been created successfully, select the app from the list of applications. It should be at the bottom of the list.
+3. After the app has been created successfully, from Azure Active Directory, left side menu choose App registrations and select the app (created in step 2) from the list of applications.
 4. Make a note of **Application ID** for the app you registered. 
 5. Make a note of the **Object ID** for this application, since you will need this later to register the file handler manifest.
 6. Configure the application settings for this sample:
-   1. Select **Reply URLs** and ensure that `https://app-glasswallfilehandler-prod.azurewebsites.net/signin-oidc` is listed.
-   2. Select **Required Permissions** and then **Add**.
-   3. Select **Select an API** and then choose **Microsoft Graph** and click **Select**.
-   4. Find the permission **Have full access to all files user can access** and check the box next to it, then click **Select**, and then **Done**.
-   5. Select **Keys** and generate a new application key by entering a description for the key, selecting a duration, and then click **Save**. Make a note of the value displayed, since it will only be displayed once.
+   1. Select **Authentication** from left bar, choose to **Add platform**, select **web** and add **Redirect URIs** as the one setup in 2.3 (e.g. `https://app-glasswallfilehandler-prod.azurewebsites.net/signin-oidc`) is added.
+   2. Select **API Permissions**, click to **Add a permission**.
+   3. Choose **Microsoft Graph** and select **Deligated permissions**.
+   4. Under **Files** find the permission **Have full access to all files user can access** and check the box next to it, then click **Select**, and then **Done**.
+7. Select **Ceriticates and Secrets** and choose to add **New Client Secret** by entering a description for the key, selecting a duration, and then click **Save**. Make a note of the `Client Value` and `Client ID` displayed, since it will only be displayed once.
 
 #### Register the file handler manifest
 
-1. After registering your app with Azure Active Directory, you can upload the file handler manifest information into the application.
+- After registering your app with Azure Active Directory, you can upload the file handler manifest information into the application.
+1. Select **Manifest** from left menu
+2. In displayed editor under **Addins** add below file handler manifest (make sure to change url to correspond to the one you added) and Save
 
-For detailed instructions on how to upload the file handler manifest, see [Registering file handlers](https://docs.microsoft.com/en-us/onedrive/developer/file-handlers/register-manually).
-
-The file handler manifest  is as below:
 ```
 [
     {
@@ -109,6 +118,7 @@ The file handler manifest  is as below:
     }
 ]
 ```
+- For detailed instructions on how to upload the file handler manifest, see [Registering file handlers](https://docs.microsoft.com/en-us/onedrive/developer/file-handlers/register-manually).
 
 #### Update FileHandler Application Settings
 Following application settings of FileHandler web app configuration needs to be updated:
