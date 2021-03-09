@@ -74,8 +74,8 @@ Following are the steps to deploy GW FileHandler web app:
 1. Go to your [Azure Portal](https://portal.azure.com/).
 2. Create a resource group. For r.g. rg-glasswallfilehandler-prod
 3. Create a new web app with appropriate plan by selecting resource group created in step 2, clicking on `Add` button in top toolbar and selecting `Web App` from the list.
-4. Carefully select proper plan. For test you can go with `Free sku and size`, last option.
-5. For runtime stack choose `.Net 5`
+4. For runtime stack choose `.Net 5`
+5. Carefully select proper plan. For test you can go with `Free sku and size`, last option.
 6. Example name for web app can be: **app-glasswallfilehandler-prod**. Once the web app is created, make a note of the URI. For e.g. https://app-glasswallfilehandler-prod.azurewebsites.net
 
 #### Register a new application
