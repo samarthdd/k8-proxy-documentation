@@ -27,12 +27,12 @@ Both components need to be deployed to your environments (M365 + Azure) as descr
 ### GW SPO Extension Deployment 
 Following are the steps to deploy GW SPO Extension:
 
-#### Download Software
+#### 1. Download Software
 1. Go to **GW GitHub Releases** page: [https://github.com/k8-proxy/gp-sharepoint-plugins/releases](https://github.com/k8-proxy/gp-sharepoint-plugins/releases).
 2. Download the latest release of **GW SPO Extension** - **GWO365FileHandlerExtension.zip**.
 3. Unzip to a local folder. You will find a package "glasswall-hide-download-ext.sppkg" which needs to be deployed.
 
-#### Create App Catalog Site
+#### 2. Create App Catalog Site
 1. Go to the **SharePoint Admin Center** by entering the following URL in your browser: **https://{tenant}-admin.sharepoint.com**, where {tenant} is string next to your domain (ex. `glasswall@share.onmicrosoft.com`, {tenant} is `share`)
 2. In the left sidebar, select **More features**.
 3. Locate the section **Apps** and select **Open**.
@@ -46,14 +46,14 @@ Following are the steps to deploy GW SPO Extension:
 7. SharePoint creates the app catalog site, and you can see its progress in the SharePoint admin center.
 8. Click [here](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant#create-app-catalog-site) for more info.
 
-#### Deploy Package to App Catalog Site
+#### 3. Deploy Package to App Catalog Site
 1. Open your tenant's **app catalog site** (i.e. https://{tenant}.sharepoint.com/sites/apps).
 2. Click on **Apps for SharePoint** on Left Navigation Menu.
 3. Click on **Upload**. Browse and select **glasswall-hide-download-ext.sppkg** package downloaded at earlier step from your local drive.
 4. Check **Make this solution available to all sites in the organization** and click on **Deploy** to deploy the solution tenant-wide.
 5. Verify deployment ended without any issues (check the last column in the table on the current page). In case there were errors, delete uploaded package and try again.
 
-#### Verify Solution
+#### 4. Verify Solution
 1. Navigate to SharePoint Online (O365) Site.
 2. Open any Document Library (make sure you have some files uploaded there).
 3. Select any file (click on the checkbox) and then in the toolbar, you will not see the default 'Download' button anymore.
@@ -65,12 +65,12 @@ Following are the steps to deploy GW SPO Extension:
 ### GW FileHandler Web App Deployment
 Following are the steps to deploy GW FileHandler web app:
 
-#### Download Software
+#### 1. Download Software
 1. Go to GW GitHub releases page: [https://github.com/k8-proxy/gp-sharepoint-plugins/releases](https://github.com/k8-proxy/gp-sharepoint-plugins/releases).
 2. Download the latest release of GW FileHandler web app - GWO365FileHandlerWebApp.zip.
 3. Unzip to a local folder. 
 
-#### Create FileHandler Web App
+#### 2. Create FileHandler Web App
 1. Go to your [Azure Portal](https://portal.azure.com/).
 2. Create a resource group. For r.g. rg-glasswallfilehandler-prod
 3. Create a new web app with appropriate plan by selecting resource group created in step 2, clicking on `Add` button in top toolbar and selecting `Web App` from the list.
@@ -78,7 +78,7 @@ Following are the steps to deploy GW FileHandler web app:
 5. Carefully select proper plan. For test you can go with `Free sku and size`, last option.
 6. Example name for web app can be: **app-glasswallfilehandler-prod**. Once the web app is created, make a note of the URI. For e.g. https://app-glasswallfilehandler-prod.azurewebsites.net
 
-#### Register a new application
+#### 3. Register a new application
 
 The following steps will allow you to register your file handler application.
 To register a new application with Azure Active Directory, log into your [**Azure Portal**](https://portal.azure.com).
@@ -99,7 +99,7 @@ To register a new application with Azure Active Directory, log into your [**Azur
    4. Under **Files** find the permission **Have full access to all files user can access** and check the box next to it, then click **Select**, and then **Done**.
 7. Select **Ceriticates and Secrets** and choose to add **New Client Secret** by entering a description for the key, selecting a duration, and then click **Save**. Make a note of the `Client Value` and `Client ID` displayed, since it will only be displayed once.
 
-#### Register the file handler manifest
+#### 4. Register the file handler manifest
 
 - After registering your app with Azure Active Directory, you can upload the file handler manifest information into the application.
 1. Select **Manifest** from left menu
@@ -120,8 +120,11 @@ To register a new application with Azure Active Directory, log into your [**Azur
 ```
 - For detailed instructions on how to upload the file handler manifest, see [Registering file handlers](https://docs.microsoft.com/en-us/onedrive/developer/file-handlers/register-manually).
 
-#### Update FileHandler Application Settings
-Following application settings of FileHandler web app configuration needs to be updated:
+#### 5. Update FileHandler Application Settings
+Following application settings of FileHandler web app configuration needs to be updated.
+- Navigate to **App Service** and choose web app you created in previous steps. 
+- Select **Configuration** from left bar menu and click **New application settings** button in top bar.
+- Add below values (ex. `Name` is `AzureAd:ClientId`, `Value` is `client ID from step 3.7`
 1. AzureAd:ClientId - Client Id of the App registered with Azure Active Directory 
 2. AzureAd:ClientSecret - Client Secret created in App registered with Azure Active Directory 
 3. AzureAd:Domain - Domain of your O365 subscription. For e.g. glasswall.onmicrosoft.com.
@@ -129,11 +132,11 @@ Following application settings of FileHandler web app configuration needs to be 
 5. Glasswall:BaseUrl - Base url of your Glasswall rebuild api endpoint. For e.g. https://glasswall.execute-api.us-west-2.amazonaws.com/Prod/rebuild/api
 6. Glasswall:ApiKey - Api Key to access the Glasswall rebuild api.
 
-#### Deploy FileHandler Code
+#### 6. Deploy FileHandler Code
 1. Navigate to local folder where FileHandler release was downloaded.
-2. Deploy the code to your Azure Web App.
+2. Deploy the code to your Azure Web App
 
-#### Verify Solution
+#### 7. Verify Solution
 1. Navigate to SharePoint Online (O365) Site.
 2. Open any Document Library.
 3. Select any file. 
