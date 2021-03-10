@@ -133,9 +133,14 @@ Following application settings of FileHandler web app configuration needs to be 
 6. Glasswall:ApiKey - Api Key to access the Glasswall rebuild api.
 
 #### 6. Deploy FileHandler Code
-1. Navigate to local folder where FileHandler release was downloaded.
-2. Deploy the code to your Azure Web App
+1. Navigate to local folder where [FileHandler release](https://github.com/k8-proxy/gp-sharepoint-plugins/releases) was downloaded.
+2. Make sure you have **az cli** install on your workstation
+3. Deploy the code to your Azure Web App by following instructions from [here](https://docs.microsoft.com/en-us/azure/app-service/deploy-run-package) or based on example below (make sure to add corresponding values for resource-group, app name and path to fileHandler)
 
+```
+az login
+az webapp deployment source config-zip --resource-group <group-name> --name <app-name> --src /path/to/<filename>.zip
+```
 #### 7. Verify Solution
 1. Navigate to SharePoint Online (O365) Site.
 2. Open any Document Library.
