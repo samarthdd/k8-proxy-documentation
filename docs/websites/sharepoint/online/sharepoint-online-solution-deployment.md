@@ -94,16 +94,15 @@ To register a new application with Azure Active Directory, log into your [**Azur
 5. Make a note of the **Object ID** for this application, since you will need this later to register the file handler manifest.
 6. Configure the application settings for this sample:
    1. Select **Authentication** from left bar, choose to **Add platform**, select **web** and add **Redirect URIs** as the one setup in 2.3 (e.g. `https://app-glasswallfilehandler-prod.azurewebsites.net/signin-oidc`) is added.
-   2. Select **API Permissions**, click to **Add a permission**.
-   3. Choose **Microsoft Graph** and select **Deligated permissions**.
-   4. Under **Files** find the permission **Have full access to all files user can access** and check the box next to it, then click **Select**, and then **Done**.
-7. Select **Ceriticates and Secrets** and choose to add **New Client Secret** by entering a description for the key, selecting a duration, and then click **Save**. Make a note of the `Client Value` and `Client ID` displayed, since it will only be displayed once.
+   2. Select **API Permissions**, click to **Add a permission**, choose **Microsoft Graph** and select **Deligated permissions**. Under **Files** find the permission **Have full access to all files user can access** and check the box next to it, then click **Select**, and then **Done**.
+   3. Under **API Permissions**, click **Grant Admin Consent** button, to grant access for above permission.
+   4. Select **Ceriticates and Secrets** and choose to add **New Client Secret** by entering a description for the key, selecting a duration, and then click **Save**. Make a note of the `Client Value` and `Client ID` displayed, since it will only be displayed once.
 
 #### 4. Register the file handler manifest
 
 - After registering your app with Azure Active Directory, you can upload the file handler manifest information into the application.
 1. Select **Manifest** from left menu
-2. In displayed editor under **Addins** add below file handler manifest (make sure to change url to correspond to the one you added) and Save
+2. In displayed editor under **Addins** add below file handler manifest (make sure to change url to correspond to the one you added and add new ID by generating random GUID) and Save
 
 ```
 [
@@ -118,7 +117,9 @@ To register a new application with Azure Active Directory, log into your [**Azur
     }
 ]
 ```
+
 - For detailed instructions on how to upload the file handler manifest, see [Registering file handlers](https://docs.microsoft.com/en-us/onedrive/developer/file-handlers/register-manually).
+
 
 #### 5. Update FileHandler Application Settings
 Following application settings of FileHandler web app configuration needs to be updated.
@@ -142,11 +143,25 @@ az login
 az webapp deployment source config-zip --resource-group <group-name> --name <app-name> --src /path/to/<filename>.zip
 ```
 #### 7. Verify Solution
-1. Navigate to SharePoint Online (O365) Site.
-2. Open any Document Library.
-3. Select any file. 
-4. Download the file.
-5. The downloaded file will be rebuilt by Glasswall.
+
+1. Clean cache
+    - File handlers are cached locally in the browser and on the server. These caches have a timeout of 24 hours, meaning it can take up to 48 hours for updates to a File Handler manifest to appear for users.
+    - In case you want to test your changes in less then 24h you will need to clean cache. While being authenticate to your sharepoint account in new tab, run:
+
+     ```
+     https://{tenant}-my.sharepoint.com/_api/v2.0/drive/apps?forceRefresh=1
+     ```
+    - Make sure to logout and log back in after the reset and that as an output you get your addins content
+    ```
+    {"@odata.context":"https://{tenant}.sharepoint.com/_api/v2.0/$metadata#driveApps","value":[{"application":{"id":"<APPID>","displayName":"GlasswallFileHandlerApp"},"fileHandler":{"appIcon":{"png1x":"https://glasswallsolutions.com/wp-content/uploads/2020/05/File-Drop-700.png"},"fileTypeDisplayName":"Glasswall(.NETFW)","fileTypeIcon":{"png1x":"https://glasswallsolutions.com/wp-content/uploads/2020/05/File-Drop-700.png"},"fileTypeIconUrl":"https://glasswallsolutions.com/wp-content/uploads/2020/05/File-Drop-700.png","version":2},"hidden":false,"id":"<GUID>"}]}
+    ```
+    - More details about this can be found [here](https://docs.microsoft.com/en-us/onedrive/developer/file-handlers/reset-cache?view=odsp-graph-online)
+2. Navigate to SharePoint Online (O365) Site.
+3. Open any Document Library.
+4. Select any file. 
+5. Verify custom Download button is present. 
+6. Download the file.
+7. Verify that downloaded file is rebuilt by Glasswall (you can upload file to `https://file-drop.uk.co` and verify it comes clean).
 
 
 #### Supported Browsers
