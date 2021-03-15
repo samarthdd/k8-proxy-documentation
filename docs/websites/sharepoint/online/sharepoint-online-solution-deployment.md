@@ -89,7 +89,7 @@ To register a new application with Azure Active Directory, log into your [**Azur
    2. Ensure **Application Type** is set to **Web app / API**
    3. Enter a sign-on URL for your application. This will be `https://app-glasswallfilehandler-prod.azurewebsites.net`.
    4. Click **Create** to create the app.
-3. After the app has been created successfully, from Azure Active Directory, left side menu choose App registrations and select the app (created in step 2) from the list of applications.
+3. After the app has been created successfully, from Azure Active Directory, left side menu choose **App registrations** and select the app (created in step 2) from the list of applications.
 4. Make a note of **Application ID** for the app you registered. 
 5. Make a note of the **Object ID** for this application, since you will need this later to register the file handler manifest.
 6. Configure the application settings for this sample:
@@ -97,6 +97,12 @@ To register a new application with Azure Active Directory, log into your [**Azur
    2. Select **API Permissions**, click to **Add a permission**, choose **Microsoft Graph** and select **Deligated permissions**. Under **Files** find the permission **Have full access to all files user can access** and check the box next to it, then click **Select**, and then **Done**.
    3. Under **API Permissions**, click **Grant Admin Consent** button, to grant access for above permission.
    4. Select **Ceriticates and Secrets** and choose to add **New Client Secret** by entering a description for the key, selecting a duration, and then click **Save**. Make a note of the `Client Value` and `Client ID` displayed, since it will only be displayed once.
+7. From Azure Active Directory, left side menu choose **Enterprise application** and select the app (created in step 2) from the list of applications.
+   1. From the left side menu select **Properties**
+   2. Set **Enabled for users to sign-in?** to `Yes`
+   3. Set **Visible to users?** to `Yes`
+   4. Click **Save** in top bar menu
+
 
 #### 4. Register the file handler manifest
 
@@ -131,12 +137,12 @@ Following application settings of FileHandler web app configuration needs to be 
 3. AzureAd:Domain - Domain of your O365 subscription. For e.g. glasswall.onmicrosoft.com.
 4. AzureAd:TenantId - Tenant id of your Azure Active Directory tenant.  
 5. Glasswall:BaseUrl - Base url of your Glasswall rebuild api endpoint. For e.g. https://glasswall.execute-api.us-west-2.amazonaws.com/Prod/rebuild/api
-6. Glasswall:ApiKey - Api Key to access the Glasswall rebuild api.
+6. Glasswall:ApiKey - Api Key to access the Glasswall rebuild api (can be found [here](https://glasswall-store.com/products/glasswall-rebuild-cloud-in-shared-cloud-environment?variant=33739907006604)).
 
 #### 6. Deploy FileHandler Code
-1. Navigate to local folder where [FileHandler release](https://github.com/k8-proxy/gp-sharepoint-plugins/releases) was downloaded.
-2. Make sure you have **az cli** install on your workstation
-3. Deploy the code to your Azure Web App by following instructions from [here](https://docs.microsoft.com/en-us/azure/app-service/deploy-run-package) or based on example below (make sure to add corresponding values for resource-group, app name and path to fileHandler)
+1. Navigate to local folder where GWO365FileHandlerWebApp.zip was downloaded (from [FileHandler release](https://github.com/k8-proxy/gp-sharepoint-plugins/releases)).
+2. Make sure you have **az cli** install on your workstation.
+3. Deploy the code to your Azure Web App by following instructions from [here](https://docs.microsoft.com/en-us/azure/app-service/deploy-run-package) or based on example below (make sure to add corresponding values for resource-group, app name and path to fileHandler).
 
 ```
 az login
@@ -151,12 +157,19 @@ az webapp deployment source config-zip --resource-group <group-name> --name <app
      ```
      https://{tenant}-my.sharepoint.com/_api/v2.0/drive/apps?forceRefresh=1
      ```
-    - Make sure to logout and log back in after the reset and that as an output you get your addins content
+
+    - Navigate to your sharepoint `https://{tenant}.sharepoint.com/` and from dev console, clean local and session storage cache.
+    - Navigate to your oneDrive `https://{tenant}-my.sharepoint.com/` and from dev console, clean local and session storage cache.
+    - Close your Browser.
+    - Open your Browser again and access your Sharepoint (e.g. `https://{tenant}.sharepoint.com/`).
+    - In the new tab run `https://{tenant}-my.sharepoint.com/_api/v2.0/drive/apps`.
+    - Make sure as an output you get your addins content.
+    
     ```
-    {"@odata.context":"https://{tenant}.sharepoint.com/_api/v2.0/$metadata#driveApps","value":[{"application":{"id":"<APPID>","displayName":"GlasswallFileHandlerApp"},"fileHandler":{"appIcon":{"png1x":"https://glasswallsolutions.com/wp-content/uploads/2020/05/File-Drop-700.png"},"fileTypeDisplayName":"Glasswall(.NETFW)","fileTypeIcon":{"png1x":"https://glasswallsolutions.com/wp-content/uploads/2020/05/File-Drop-700.png"},"fileTypeIconUrl":"https://glasswallsolutions.com/wp-content/uploads/2020/05/File-Drop-700.png","version":2},"hidden":false,"id":"<GUID>"}]}
+    {"@odata.context":"https://{tenant}.sharepoint.com/_api/v2.0/$metadata#driveApps","value":[{"application":{"id":"  <APPID>","displayName":"GlasswallFileHandlerApp"},"fileHandler":{"appIcon":{"png1x":"https://glasswallsolutions.com/wp-content/uploads/2020/05/File-Drop-700.png"},"fileTypeDisplayName":"Glasswall(.NETFW)","fileTypeIcon":{"png1x":"https://glasswallsolutions.com/wp-content/uploads/2020/05/File-Drop-700.png"},"fileTypeIconUrl":"https://glasswallsolutions.com/wp-content/uploads/2020/05/File-Drop-700.png","version":2},"hidden":false,"id":"<GUID>"}]}
     ```
     - More details about this can be found [here](https://docs.microsoft.com/en-us/onedrive/developer/file-handlers/reset-cache?view=odsp-graph-online)
-2. Navigate to SharePoint Online (O365) Site.
+2. Navigate back to SharePoint Online (O365) Site.
 3. Open any Document Library.
 4. Select any file. 
 5. Verify custom Download button is present. 
