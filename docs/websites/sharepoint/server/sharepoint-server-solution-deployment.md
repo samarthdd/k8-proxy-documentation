@@ -68,8 +68,15 @@ Ex: cd C:\Users\USERNAME\Downloads\Glasswall.FileHandler and change the director
 
 7. If the error 'PSSECURITYEXCEPTION' occurs, then do as below:
 With PowerShell, you must ensure Get-ExecutionPolicy is not Restricted. We suggest using Bypass to bypass the policy to get things installed or AllSigned for quite a bit more security.
-Run Get-ExecutionPolicy. If it returns Restricted, then run Set-ExecutionPolicy AllSigned or Set-ExecutionPolicy Bypass -Scope Process.
-see [](https://go.microsoft.com/fwlink/?LinkID=135170)
+
+Run `Get-ExecutionPolicy` If it returns `Restricted`, then run:
+
+```
+Set-ExecutionPolicy AllSigned 
+or 
+Set-ExecutionPolicy Bypass -Scope Process.
+```
+click [here](https://go.microsoft.com/fwlink/?LinkID=135170) for more info
 
 8. After successful installation, the features will be activated.
 
