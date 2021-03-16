@@ -48,8 +48,7 @@ The zip file GWSharePointSolution.zip contains below files for the installation
 #### Installation Steps 
 1. RDP / Login to the SharePoint Server where the Central Administration is installed. In the multiple server farm environment login to the Application Server. The account used to login should be the farm Admin account and have local server administrator.
 2. Copy the Glasswall release folder content to the server local folder. Ex: Downloads folder
-3. Locate the file InstallFileHandler.ps1. Copy the location.
-4. With Administrator privileges, click on Start->Microsoft SharePoint 2019 Products->SharePoint 2019 Management Shell. This will open the PowerShell terminal for SharePoint 2019
+3. With Administrator privileges, click on Start->Microsoft SharePoint 2019 Products->SharePoint 2019 Management Shell. This will open the PowerShell terminal for SharePoint 2019
 
 ![](../../../../static/img/docs/websites/sharepoint/server/install-4.png)
 
