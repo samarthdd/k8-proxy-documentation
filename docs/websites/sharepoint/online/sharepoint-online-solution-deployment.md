@@ -180,3 +180,8 @@ az webapp deployment source config-zip --resource-group <group-name> --name <app
 
 #### Repository
 - File Handler : [https://github.com/k8-proxy/gp-sharepoint-plugins/tree/main/Online/glasswall.o365.filehandler/Net5](https://github.com/k8-proxy/gp-sharepoint-plugins/tree/main/Online/glasswall.o365.filehandler/Net5).
+
+#### Deployment Video
+
+[![Installation Video (OVA)](https://img.youtube.com/vi/yaBPLn9ISSg/hqdefault.jpg)](https://www.youtube.com/watch?v=eg7StJR8yuU&ab_channel=GlasswallEngineering)
+
