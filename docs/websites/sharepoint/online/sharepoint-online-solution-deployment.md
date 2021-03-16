@@ -136,7 +136,7 @@ Following application settings of FileHandler web app configuration needs to be 
 2. AzureAd:ClientSecret - Client Secret created in App registered with Azure Active Directory 
 3. AzureAd:Domain - Domain of your O365 subscription. For e.g. glasswall.onmicrosoft.com.
 4. AzureAd:TenantId - Tenant id of your Azure Active Directory tenant.  
-5. Glasswall:BaseUrl - Base url of your Glasswall rebuild api endpoint. For e.g. https://glasswall.execute-api.us-west-2.amazonaws.com/Prod/rebuild/api
+5. Glasswall:BaseUrl - Base url of your Glasswall rebuild api endpoint. Make sure you are using valid URL.
 6. Glasswall:ApiKey - Api Key to access the Glasswall rebuild api (can be found [here](https://glasswall-store.com/products/glasswall-rebuild-cloud-in-shared-cloud-environment?variant=33739907006604)).
 
 #### 6. Deploy FileHandler Code
@@ -151,13 +151,8 @@ az webapp deployment source config-zip --resource-group <group-name> --name <app
 #### 7. Verify Solution
 
 1. Clean cache
-    - File handlers are cached locally in the browser and on the server. These caches have a timeout of 24 hours, meaning it can take up to 48 hours for updates to a File Handler manifest to appear for users.
-    - In case you want to test your changes in less then 24h you will need to clean cache. While being authenticate to your sharepoint account in new tab, run:
-
-     ```
-     https://{tenant}-my.sharepoint.com/_api/v2.0/drive/apps?forceRefresh=1
-     ```
-
+    - File handlers are cached locally in the browser and on the server. These caches have a timeout of 24 hours, meaning it can take up to 48 hours for updates to a File Handler manifest to appear for users. More details about this can be found [here](https://docs.microsoft.com/en-us/onedrive/developer/file-handlers/reset-cache?view=odsp-graph-online).
+    - In case you want to test your changes in less then 24h you will need to clean cache. While being authenticate to your sharepoint account in new tab, run: `https://{tenant}-my.sharepoint.com/_api/v2.0/drive/apps?forceRefresh=1`
     - Navigate to your sharepoint `https://{tenant}.sharepoint.com/` and from dev console, clean local and session storage cache.
     - Navigate to your oneDrive `https://{tenant}-my.sharepoint.com/` and from dev console, clean local and session storage cache.
     - Close your Browser.
@@ -165,16 +160,18 @@ az webapp deployment source config-zip --resource-group <group-name> --name <app
     - In the new tab run `https://{tenant}-my.sharepoint.com/_api/v2.0/drive/apps`.
     - Make sure as an output you get your addins content.
     
-    ```
-    {"@odata.context":"https://{tenant}.sharepoint.com/_api/v2.0/$metadata#driveApps","value":[{"application":{"id":"  <APPID>","displayName":"GlasswallFileHandlerApp"},"fileHandler":{"appIcon":{"png1x":"https://glasswallsolutions.com/wp-content/uploads/2020/05/File-Drop-700.png"},"fileTypeDisplayName":"Glasswall(.NETFW)","fileTypeIcon":{"png1x":"https://glasswallsolutions.com/wp-content/uploads/2020/05/File-Drop-700.png"},"fileTypeIconUrl":"https://glasswallsolutions.com/wp-content/uploads/2020/05/File-Drop-700.png","version":2},"hidden":false,"id":"<GUID>"}]}
-    ```
-    - More details about this can be found [here](https://docs.microsoft.com/en-us/onedrive/developer/file-handlers/reset-cache?view=odsp-graph-online)
+```
+{"@odata.context":"https://{tenant}.sharepoint.com/_api/v2.0/$metadata#driveApps","value":[{"application":{"id":"  <APPID>","displayName":"GlasswallFileHandlerApp"},"fileHandler":{"appIcon":{"png1x":"https://glasswallsolutions.com/wp-content/uploads/2020/05/File-Drop-700.png"},"fileTypeDisplayName":"Glasswall(.NETFW)","fileTypeIcon":{"png1x":"https://glasswallsolutions.com/wp-content/uploads/2020/05/File-Drop-700.png"},"fileTypeIconUrl":"https://glasswallsolutions.com/wp-content/uploads/2020/05/File-Drop-700.png","version":2},"hidden":false,"id":"<GUID>"}]}
+```
+   
 2. Navigate back to SharePoint Online (O365) Site.
 3. Open any Document Library.
 4. Select any file. 
 5. Verify custom Download button is present. 
 6. Download the file.
-7. Verify that downloaded file is rebuilt by Glasswall (you can upload file to `https://file-drop.uk.co` and verify it comes clean).
+   - In case you are not able to **Download** file, verify that correct Glasswall Rebuild URL and Rebuild API are set in section 5.
+8. Verify that downloaded file is rebuilt by Glasswall (you can upload file to `https://file-drop.co.uk` and verify it comes clean).
+   - If the file is not rebuild correctly, the issue has to do with Glasswall Rebuild rather than solution provided.
 
 
 #### Supported Browsers
