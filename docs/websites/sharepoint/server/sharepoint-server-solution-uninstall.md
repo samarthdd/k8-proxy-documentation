@@ -8,21 +8,19 @@ sidebar_label: File Handler App Deployment Uninstall
 The Sharepoint Server plugin allows to delegate all download and uploads activities in the SharePoint User Interface to the GlassWall Rebuild engine. This keeps the all sharepoint documents safe.
 
 
-## Removing File Handler V1 Plugin
+## Removing File Handler Plugin
 
-1. To remove the File Handler, firstly we need to identify whether the application plugin has been installed on the machine or not. To identify the installation status, Open SharePoint 2019 Management Shell and run below cmdlet.
+1. To remove the File Handler, firstly we need to identify whether the application plugin has been installed on the machine or not. To identify the installation status, Open SharePoint 2019 Management Shell and run: `Get-SPSolution`
 
 ![](../../../../static/img/docs/websites/sharepoint/server/image029.png)
 
-_ **Get-SPSolution** _
+2. If the output prompt looks like below Glasswall.FileHandler.wsp has been installed. Else we don't have any Glasswall.FileHandler.wsp installed.
 
 ![](../../../../static/img/docs/websites/sharepoint/server/image030.png)
+SharePoint 2019 Management Shell
 
-2. If the output prompt for the FilehandlerV1.wsp, it has been installed. Else we don't have any FIlehandlerV1.wsp has not been installed.
+3. For the removal of this plugin open SharePoint 2019 Management Shell (as Administrator) and navigate where *RemoveFileHandler.ps1* and run the file
 
-3. For the removal of this plugin, download 'RemoveFileHandler.PS1' from the below git location.
-
-[https://github.com/k8-proxy/gp-sharepoint-plugins/tree/main/Server/installer](https://github.com/k8-proxy/gp-sharepoint-plugins/tree/main/Server/installer)
 
 4. Once this has been downloaded in the SharePoint machine, Open SharePoint 2019 Management Shell
 
