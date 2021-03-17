@@ -48,28 +48,26 @@ The zip file GWSharePointSolution.zip contains below files for the installation
 #### Installation Steps 
 1. RDP / Login to the SharePoint Server where the Central Administration is installed. In the multiple server farm environment login to the Application Server. The account used to login should be the farm Admin account and have local server administrator.
 2. Copy the Glasswall release folder content to the server local folder. Ex: Downloads folder
-
-3. Locate the file InstallFileHandler.ps1. Copy the location.
-4. With Administrator privileges, click on Start->Microsoft SharePoint 2019 Products->SharePoint 2019 Management Shell. This will open the PowerShell terminal for SharePoint 2019
+3. With Administrator privileges, click on Start->Microsoft SharePoint 2019 Products->SharePoint 2019 Management Shell. This will open the PowerShell terminal for SharePoint 2019
 
 ![](../../../../static/img/docs/websites/sharepoint/server/install-4.png)
 
 ![](../../../../static/img/docs/websites/sharepoint/server/install-5.png)
 
-5. In the command prompt paste the location of the Glasswall release folder.
-    
-Ex: cd C:\Users\USERNAME\Downloads\Glasswall.FileHandler and change the directory to the location.
+5. In the command prompt navigate to the the location of the Glasswall release folder.
+ ```   
+Ex: cd C:\Users\USERNAME\Downloads\Glasswall.FileHandler
+```
 
 ![](../../../../static/img/docs/websites/sharepoint/server/install-6.png)
 
-6. Type the file name InstallFileHandler.ps1 and press enter to install the wsp. This command will install and activate all the feature.
+6. Type the file name `InstallFileHandler.ps1 <path of Glasswall.FileHandler.wsp>`  and press enter to install the wsp. This command will install and activate all the features.
 
 ![https://go.microsoft.com/fwlink/?LinkID=135170](../../../../static/img/docs/websites/sharepoint/server/install-7.png)
 
 7. If the error 'PSSECURITYEXCEPTION' occurs, then do as below:
-With PowerShell, you must ensure Get-ExecutionPolicy is not Restricted. We suggest using Bypass to bypass the policy to get things installed or AllSigned for quite a bit more security.
-Run Get-ExecutionPolicy. If it returns Restricted, then run Set-ExecutionPolicy AllSigned or Set-ExecutionPolicy Bypass -Scope Process.
-see [](https://go.microsoft.com/fwlink/?LinkID=135170)
+With PowerShell, you must ensure Get-ExecutionPolicy is not Restricted. We suggest using Bypass to bypass the policy to get things installed or AllSigned for quite a bit more secure.
+Run `Get-ExecutionPolicy`. If it returns `Restricted`, then run `Set-ExecutionPolicy AllSigned` or `Set-ExecutionPolicy Bypass -Scope Process`.Click [here](https://go.microsoft.com/fwlink/?LinkID=135170) for more information.
 
 8. After successful installation, the features will be activated.
 
