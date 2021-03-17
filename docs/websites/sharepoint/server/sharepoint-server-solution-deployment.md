@@ -62,7 +62,7 @@ Ex: cd C:\Users\USERNAME\Downloads\Glasswall.FileHandler
 
 5. Type the file name `InstallFileHandler.ps1 <path of Glasswall.FileHandler.wsp>`  and press enter to install the wsp. This command will install and activate all the features.
 
-![](../../../../static/img/docs/websites/sharepoint/server/Sp-onpremInst2.png)
+![](../../../../static/img/docs/websites/sharepoint/server/SP-onpremInst.png)
 
 6. If the error 'PSSECURITYEXCEPTION' occurs, then do as below:
 With PowerShell, you must ensure Get-ExecutionPolicy is not Restricted. We suggest using Bypass to bypass the policy to get things installed or AllSigned for quite a bit more secure.
@@ -76,7 +76,8 @@ Run `Get-ExecutionPolicy`. If it returns `Restricted`, then run `Set-ExecutionPo
    - Starting **Central Administration** will open your Browser and load `http://sps2019-plugin/` URL
 2. Once page is loaded, new section, in left bar menu, will be created called **Glasswall**. Click on Glasswall section.
 3. Set the Glasswall Rebuild API URL & Access Key. 
-4. Save the configuration.
+- NOTE: Add `/Rebuild/base64` in the end of the provided Glasswall Rebuild API URL
+5. Save the configuration.
 
 #### Verify Solution
 1. Navigate to your OnPrem/Server SharePoint site via `http://sps2019-plugin/Shared%20Documents/Forms/AllItems.aspx`.
