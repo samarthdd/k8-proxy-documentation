@@ -16,20 +16,17 @@ The Sharepoint Server plugin allows to delegate all download and uploads activit
 
 2. If the output prompt looks like below Glasswall.FileHandler.wsp has been installed. Else we don't have any Glasswall.FileHandler.wsp installed.
 
-![](../../../../static/img/docs/websites/sharepoint/server/get-spsolution.png)
+![](https://github.com/k8-proxy/k8-proxy-documentation/blob/master/static/img/docs/websites/sharepoint/server/get-spsolution.png)
 
-3. For the removal of this plugin open SharePoint 2019 Management Shell (as Administrator) and navigate where *RemoveFileHandler.ps1* and run the file
+3. For the removal of this plugin open SharePoint 2019 Management Shell (as Administrator) and navigate where *RemoveFileHandler.ps1* and run the file. When prompted `Are you sure you want to perform this action?` type "YES". You should get the below output:
 
+![](https://github.com/k8-proxy/k8-proxy-documentation/blob/master/static/img/docs/websites/sharepoint/server/sp-uninsstall.png)
 
 4. If the error 'PSSECURITYEXCEPTION' occurs, then do as below:
 With PowerShell, you must ensure Get-ExecutionPolicy is not Restricted. We suggest using Bypass to bypass the policy to get things installed or AllSigned for quite a bit more secure.
 Run `Get-ExecutionPolicy`. If it returns `Restricted`, then run `Set-ExecutionPolicy AllSigned` or `Set-ExecutionPolicy Bypass -Scope Process`.Click [here](https://go.microsoft.com/fwlink/?LinkID=135170) for more information.
 
-5. Once, the cmdlet ran successfully. Validate the SharePoint Plugin running below cmdlet.
-
-'_ **Get-SPSolution** _'
-
-6. This time it should not prompt for the FileHandlerV1.wsp
+5. Once, the cmdlet ran successfully. Validate the SharePoint Plugin running `Get-SPSolution`. This time it should not prompt any output
 
 ![](../../../../static/img/docs/websites/sharepoint/server/image033.png)
 
