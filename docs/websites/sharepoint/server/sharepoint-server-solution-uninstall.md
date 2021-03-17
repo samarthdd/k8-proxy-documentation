@@ -16,7 +16,7 @@ The Sharepoint Server plugin allows to delegate all download and uploads activit
 
 2. If the output prompt looks like below Glasswall.FileHandler.wsp has been installed. Else we don't have any Glasswall.FileHandler.wsp installed.
 
-![](../../../../static/img/docs/websites/sharepoint/server/image030.png)
+![](../../../../static/img/docs/websites/sharepoint/server/get-spsolution.png)
 
 3. For the removal of this plugin open SharePoint 2019 Management Shell (as Administrator) and navigate where *RemoveFileHandler.ps1* and run the file
 
