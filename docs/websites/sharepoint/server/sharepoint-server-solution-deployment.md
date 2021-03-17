@@ -60,11 +60,9 @@ The zip file GWSharePointSolution.zip contains below files for the installation
 Ex: cd C:\Users\USERNAME\Downloads\Glasswall.FileHandler
 ```
 
-![](../../../../static/img/docs/websites/sharepoint/server/install-6.png)
-
 5. Type the file name `InstallFileHandler.ps1 <path of Glasswall.FileHandler.wsp>`  and press enter to install the wsp. This command will install and activate all the features.
 
-![https://go.microsoft.com/fwlink/?LinkID=135170](../../../../static/img/docs/websites/sharepoint/server/install-7.png)
+![](../../../../static/img/docs/websites/sharepoint/server/Sp-onpremInst2.png)
 
 6. If the error 'PSSECURITYEXCEPTION' occurs, then do as below:
 With PowerShell, you must ensure Get-ExecutionPolicy is not Restricted. We suggest using Bypass to bypass the policy to get things installed or AllSigned for quite a bit more secure.
