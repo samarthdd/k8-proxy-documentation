@@ -23,8 +23,9 @@ The Sharepoint Server plugin allows to delegate all download and uploads activit
 ![](../../../../static/img/docs/websites/sharepoint/server/sp-uninsstall.png)
 
 4. If the error 'PSSECURITYEXCEPTION' occurs, then do as below:
-With PowerShell, you must ensure Get-ExecutionPolicy is not Restricted. We suggest using Bypass to bypass the policy to get things installed or AllSigned for quite a bit more secure.
-Run `Get-ExecutionPolicy`. If it returns `Restricted`, then run `Set-ExecutionPolicy AllSigned` or `Set-ExecutionPolicy Bypass -Scope Process`.Click [here](https://go.microsoft.com/fwlink/?LinkID=135170) for more information.
+    - With PowerShell, run `Get-ExecutionPolicy` and inssure that it is set correctly (not Restrected or Reserved). 
+    - Use Bypass to bypass the policy to get things installed or AllSigned for quite a bit more secure. Run `Set-ExecutionPolicy AllSigned` and/or `Set-ExecutionPolicy Bypass -Scope Process`.
+    - Click [here](https://go.microsoft.com/fwlink/?LinkID=135170) for more information.
 
 5. Once, the cmdlet ran successfully. Validate the SharePoint Plugin running `Get-SPSolution`. This time it should not prompt any output
 
