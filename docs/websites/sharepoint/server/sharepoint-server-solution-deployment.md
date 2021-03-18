@@ -65,8 +65,9 @@ Ex: cd C:\Users\USERNAME\Downloads\Glasswall.FileHandler
 ![](../../../../static/img/docs/websites/sharepoint/server/SP-onpremInst.png)
 
 6. If the error 'PSSECURITYEXCEPTION' occurs, then do as below:
-With PowerShell, you must ensure Get-ExecutionPolicy is not Restricted. We suggest using Bypass to bypass the policy to get things installed or AllSigned for quite a bit more secure.
-Run `Get-ExecutionPolicy`. If it returns `Restricted`, then run `Set-ExecutionPolicy AllSigned` or `Set-ExecutionPolicy Bypass -Scope Process`.Click [here](https://go.microsoft.com/fwlink/?LinkID=135170) for more information.
+    - With PowerShell, run `Get-ExecutionPolicy` and inssure that it is set correctly (not Restrected or Reserved). 
+    - Use Bypass to bypass the policy to get things installed or AllSigned for quite a bit more secure. Run `Set-ExecutionPolicy AllSigned` and/or `Set-ExecutionPolicy Bypass -Scope Process`.
+    - Click [here](https://go.microsoft.com/fwlink/?LinkID=135170) for more information.
 
 7. After successful installation, the features will be activated.
 
@@ -80,11 +81,12 @@ Run `Get-ExecutionPolicy`. If it returns `Restricted`, then run `Set-ExecutionPo
 5. Save the configuration.
 
 #### Verify Solution
-1. Navigate to your OnPrem/Server SharePoint site via `http://sps2019-plugin/Shared%20Documents/Forms/AllItems.aspx`.
+1. Navigate to your OnPrem Server SharePoint site/subsite/shared directory or oneDrive
 2. Open any Document Library.
 3. Select any file. 
 4. Download the file.
 5. The downloaded file will be rebuilt by Glasswall.
+6. You can verify that file got rebuild by uploading file to `http://file-drop.co.uk`
 
 #### Supported Browsers
 - Edge, Chrome, Firefox, Brave, Opera (Mac & Windows)
