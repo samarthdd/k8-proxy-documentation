@@ -48,43 +48,45 @@ The zip file GWSharePointSolution.zip contains below files for the installation
 #### Installation Steps 
 1. RDP / Login to the SharePoint Server where the Central Administration is installed. In the multiple server farm environment login to the Application Server. The account used to login should be the farm Admin account and have local server administrator.
 2. Copy the Glasswall release folder content to the server local folder. Ex: Downloads folder
-
-3. Locate the file InstallFileHandler.ps1. Copy the location.
-4. With Administrator privileges, click on Start->Microsoft SharePoint 2019 Products->SharePoint 2019 Management Shell. This will open the PowerShell terminal for SharePoint 2019
+3. With Administrator privileges, click on Start->Microsoft SharePoint 2019 Products->SharePoint 2019 Management Shell. This will open the PowerShell terminal for SharePoint 2019
 
 ![](../../../../static/img/docs/websites/sharepoint/server/install-4.png)
 
 ![](../../../../static/img/docs/websites/sharepoint/server/install-5.png)
 
-5. In the command prompt paste the location of the Glasswall release folder.
-    
-Ex: cd C:\Users\USERNAME\Downloads\Glasswall.FileHandler and change the directory to the location.
+4. In the command prompt navigate to the the location of the Glasswall release folder.
 
-![](../../../../static/img/docs/websites/sharepoint/server/install-6.png)
+```   
+Ex: cd C:\Users\USERNAME\Downloads\Glasswall.FileHandler
+```
 
-6. Type the file name InstallFileHandler.ps1 and press enter to install the wsp. This command will install and activate all the feature.
+5. Type the file name `InstallFileHandler.ps1 <path of Glasswall.FileHandler.wsp>`  and press enter to install the wsp. This command will install and activate all the features.
 
-![https://go.microsoft.com/fwlink/?LinkID=135170](../../../../static/img/docs/websites/sharepoint/server/install-7.png)
+![](../../../../static/img/docs/websites/sharepoint/server/SP-onpremInst.png)
 
-7. If the error 'PSSECURITYEXCEPTION' occurs, then do as below:
-With PowerShell, you must ensure Get-ExecutionPolicy is not Restricted. We suggest using Bypass to bypass the policy to get things installed or AllSigned for quite a bit more security.
-Run Get-ExecutionPolicy. If it returns Restricted, then run Set-ExecutionPolicy AllSigned or Set-ExecutionPolicy Bypass -Scope Process.
-see [](https://go.microsoft.com/fwlink/?LinkID=135170)
+6. If the error 'PSSECURITYEXCEPTION' occurs, then do as below:
+    - With PowerShell, run `Get-ExecutionPolicy` and inssure that it is set correctly (not Restrected or Reserved). 
+    - Use Bypass to bypass the policy to get things installed or AllSigned for quite a bit more secure. Run `Set-ExecutionPolicy AllSigned` and/or `Set-ExecutionPolicy Bypass -Scope Process`.
+    - Click [here](https://go.microsoft.com/fwlink/?LinkID=135170) for more information.
 
-8. After successful installation, the features will be activated.
+7. After successful installation, the features will be activated.
 
 #### Configuration
-1. Navigate to Central Administration Site of your SharePoint.
-2. New section will be created called Glasswall. Click on Glasswall section.
+1. Navigate to Central Administration Site of your SharePoint by navigating to Start->Microsoft SharePoint 2019 Products->SharePoint 2019 Central Administration.
+   - Note: If **Central Administration** cannot be started, make sure that SQL Server is running (navigate to Start > search for Services and in the list of services search the ones starting with SQL. Make sure they all have **running** status).
+   - Starting **Central Administration** will open your Browser and load `http://sps2019-plugin/` URL
+2. Once page is loaded, new section, in left bar menu, will be created called **Glasswall**. Click on Glasswall section.
 3. Set the Glasswall Rebuild API URL & Access Key. 
-4. Save the configuration.
+- NOTE: Add `/Rebuild/base64` in the end of the provided Glasswall Rebuild API URL
+5. Save the configuration.
 
 #### Verify Solution
-1. Navigate to your OnPrem/Server SharePoint site.
+1. Navigate to your OnPrem Server SharePoint site/subsite/shared directory or oneDrive
 2. Open any Document Library.
 3. Select any file. 
 4. Download the file.
 5. The downloaded file will be rebuilt by Glasswall.
+6. You can verify that file got rebuild by uploading file to `http://file-drop.co.uk`
 
 #### Supported Browsers
 - Edge, Chrome, Firefox, Brave, Opera (Mac & Windows)
