@@ -19,26 +19,6 @@ module.exports = {
     },
     {
         "type": "category",
-        "label": "Flavors",
-        "items": [
-            {
-                "type": "category",
-                "label": "Flavor OVA",
-                "items": []
-            },
-            {
-                "type": "category",
-                "label": "flavor-ova",
-                "items": [
-                    "flavors/flavor-ova/manual-setup-azure",
-                    "flavors/flavor-ova/overview",
-                    "flavors/flavor-ova/testing"
-                ]
-            }
-        ]
-    },
-    {
-        "type": "category",
         "label": "ESXI",
         "items": [
             {
@@ -156,79 +136,6 @@ module.exports = {
                             "products/sharepoint plugin/web/overview"
                         ]
                     }
-                ]
-            }
-        ]
-    },
-    {
-        "type": "category",
-        "label": "Websites",
-        "items": [
-            {
-                "type": "category",
-                "label": "gwfiledrop",
-                "items": []
-            },
-            {
-                "type": "category",
-                "label": "adarma",
-                "items": []
-            },
-            {
-                "type": "category",
-                "label": "bsigroup",
-                "items": []
-            },
-            {
-                "type": "category",
-                "label": "fortinet",
-                "items": []
-            },
-            {
-                "type": "category",
-                "label": "gov.uk",
-                "items": []
-            },
-            {
-                "type": "category",
-                "label": "gwengineering",
-                "items": []
-            },
-            {
-                "type": "category",
-                "label": "atlassian",
-                "items": []
-            },
-            {
-                "type": "category",
-                "label": "gwwebsite",
-                "items": []
-            },
-            {
-                "type": "category",
-                "label": "mastercard",
-                "items": []
-            },
-            {
-                "type": "category",
-                "label": "microsoft",
-                "items": []
-            },
-            {
-                "type": "category",
-                "label": "owasp",
-                "items": []
-            },
-            {
-                "type": "category",
-                "label": "sharepoint",
-                "items": []
-            },
-            {
-                "type": "category",
-                "label": "ukzones",
-                "items": [
-                    "websites/ukzones/overview"
                 ]
             }
         ]

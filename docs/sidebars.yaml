@@ -4,27 +4,18 @@
   - websites: Websites
 
 - esxi: 
-  - ESXI: 3
+  - ESXI: 1
   - welcome: Welcome
   - architecture: Architecture
   - ovas: OVAs
   - websites: Websites
-
-- flavors:
-  - Flavors: 2
-  - flavor-a: Flavor A
-  - flavor-a: Flavor E
-  - flavor-a: Flavor OVA
-
-- websites:
-  - Websites: 1
   
 
 - kb:
-  - Knowledge Base: 4
+  - Knowledge Base: 2
 
 - products:
-  - Products: 5
+  - Products: 3
   - filedrop: File Drop
   - icap server: ICAP Server
   - sharepoint plugin: Sharepoint Plugin
