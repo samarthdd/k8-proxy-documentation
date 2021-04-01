@@ -8,165 +8,12 @@ module.exports = {
             {
                 "type": "category",
                 "label": "Client Welcome",
-                "items": [
-                    "dashboards/client-welcome/index"
-                ]
+                "items": []
             },
             {
                 "type": "category",
                 "label": "Websites",
-                "items": [
-                    "dashboards/websites/deployment-notes",
-                    "dashboards/websites/development",
-                    "dashboards/websites/flavors",
-                    "dashboards/websites/notassigned",
-                    "dashboards/websites/production"
-                ]
-            }
-        ]
-    },
-    {
-        "type": "category",
-        "label": "Websites",
-        "items": [
-            {
-                "type": "category",
-                "label": "adarma",
-                "items": [
-                    "websites/adarma/overview"
-                ]
-            },
-            {
-                "type": "category",
-                "label": "atlassian",
-                "items": [
-                    "websites/atlassian/overview"
-                ]
-            },
-            {
-                "type": "category",
-                "label": "bsigroup",
-                "items": [
-                    "websites/bsigroup/overview"
-                ]
-            },
-            {
-                "type": "category",
-                "label": "emma-dataport",
-                "items": [
-                    "websites/emma-dataport/overview"
-                ]
-            },
-            {
-                "type": "category",
-                "label": "fortinet",
-                "items": [
-                    "websites/fortinet/overview"
-                ]
-            },
-            {
-                "type": "category",
-                "label": "gov.uk",
-                "items": [
-                    "websites/gov.uk/overview"
-                ]
-            },
-            {
-                "type": "category",
-                "label": "gwengineering",
-                "items": [
-                    "websites/gwengineering/overview"
-                ]
-            },
-            {
-                "type": "category",
-                "label": "gwfiledrop",
-                "items": [
-                    "websites/gwfiledrop/overview"
-                ]
-            },
-            {
-                "type": "category",
-                "label": "gwwebsite",
-                "items": [
-                    "websites/gwwebsite/overview"
-                ]
-            },
-            {
-                "type": "category",
-                "label": "mastercard",
-                "items": [
-                    "websites/mastercard/overview"
-                ]
-            },
-            {
-                "type": "category",
-                "label": "microsoft",
-                "items": [
-                    "websites/microsoft/overview"
-                ]
-            },
-            {
-                "type": "category",
-                "label": "miniio",
-                "items": [
-                    "websites/miniio/overview"
-                ]
-            },
-            {
-                "type": "category",
-                "label": "owasp",
-                "items": [
-                    "websites/owasp/overview"
-                ]
-            },
-            {
-                "type": "category",
-                "label": "sharepoint",
-                "items": [
-                    {
-                        "type": "category",
-                        "label": "online",
-                        "items": [
-                            "websites/sharepoint/online/sharepoint-online-solution-administration",
-                            "websites/sharepoint/online/sharepoint-online-solution-deployment"
-                        ]
-                    },
-                    {
-                        "type": "category",
-                        "label": "server",
-                        "items": [
-                            {
-                                "type": "category",
-                                "label": "server-setup",
-                                "items": [
-                                    "websites/sharepoint/server/server-setup/1. overview",
-                                    "websites/sharepoint/server/server-setup/2. sp-vm-manual-install",
-                                    "websites/sharepoint/server/server-setup/3. sp-vhd-to-ova",
-                                    "websites/sharepoint/server/server-setup/4. sp-ova-aws",
-                                    "websites/sharepoint/server/server-setup/5. export-ova-aws"
-                                ]
-                            },
-                            "websites/sharepoint/server/sharepoint-server-solution-administration",
-                            "websites/sharepoint/server/sharepoint-server-solution-deployment",
-                            "websites/sharepoint/server/sharepoint-server-solution-uninstall"
-                        ]
-                    },
-                    {
-                        "type": "category",
-                        "label": "web",
-                        "items": [
-                            "websites/sharepoint/web/overview"
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "category",
-                "label": "ukzones",
-                "items": [
-                    "websites/ukzones/overview"
-                ]
+                "items": []
             }
         ]
     },
@@ -177,16 +24,7 @@ module.exports = {
             {
                 "type": "category",
                 "label": "Flavor OVA",
-                "items": [
-                    "flavors/flavor-a/manual-setup-aws"
-                ]
-            },
-            {
-                "type": "category",
-                "label": "flavor-e",
-                "items": [
-                    "flavors/flavor-e/manual-setup-aws"
-                ]
+                "items": []
             },
             {
                 "type": "category",
@@ -205,44 +43,29 @@ module.exports = {
         "items": [
             {
                 "type": "category",
-                "label": "OVAs",
-                "items": [
-                    "esxi/OVAs/overview"
-                ]
-            },
-            {
-                "type": "category",
                 "label": "Websites",
                 "items": [
                     {
                         "type": "category",
                         "label": "OWASP",
-                        "items": [
-                            "esxi/Websites/OWASP/overview"
-                        ]
+                        "items": []
                     },
                     {
                         "type": "category",
                         "label": "glasswall-solutions",
-                        "items": [
-                            "esxi/Websites/glasswall-solutions/overview"
-                        ]
+                        "items": []
                     }
                 ]
             },
             {
                 "type": "category",
                 "label": "Welcome",
-                "items": [
-                    "esxi/Welcome/welcome"
-                ]
+                "items": []
             },
             {
                 "type": "category",
                 "label": "Architecture",
-                "items": [
-                    "esxi/architecture/overview"
-                ]
+                "items": []
             }
         ]
     },
@@ -254,6 +77,160 @@ module.exports = {
             "kb/mdx",
             "kb/style-guide",
             "kb/website-checklist"
+        ]
+    },
+    {
+        "type": "category",
+        "label": "Products",
+        "items": [
+            {
+                "type": "category",
+                "label": "File Drop",
+                "items": [
+                    "products/filedrop/fd-aws",
+                    "products/filedrop/fd-esxi",
+                    "products/filedrop/fd-howto"
+                ]
+            },
+            {
+                "type": "category",
+                "label": "GW Cloud SDK",
+                "items": []
+            },
+            {
+                "type": "category",
+                "label": "GW Desktop App",
+                "items": []
+            },
+            {
+                "type": "category",
+                "label": "GW Proxy",
+                "items": []
+            },
+            {
+                "type": "category",
+                "label": "ICAP Server",
+                "items": [
+                    "products/icap server/icap-aws",
+                    "products/icap server/icap-esxi",
+                    "products/icap server/icap-howto",
+                    "products/icap server/icap-ui"
+                ]
+            },
+            {
+                "type": "category",
+                "label": "Sharepoint Plugin",
+                "items": [
+                    {
+                        "type": "category",
+                        "label": "online",
+                        "items": [
+                            "products/sharepoint plugin/online/sharepoint-online-solution-administration",
+                            "products/sharepoint plugin/online/sharepoint-online-solution-deployment"
+                        ]
+                    },
+                    {
+                        "type": "category",
+                        "label": "server",
+                        "items": [
+                            {
+                                "type": "category",
+                                "label": "server-setup",
+                                "items": [
+                                    "products/sharepoint plugin/server/server-setup/1. overview",
+                                    "products/sharepoint plugin/server/server-setup/2. sp-vm-manual-install",
+                                    "products/sharepoint plugin/server/server-setup/3. sp-vhd-to-ova",
+                                    "products/sharepoint plugin/server/server-setup/4. sp-ova-aws",
+                                    "products/sharepoint plugin/server/server-setup/5. export-ova-aws"
+                                ]
+                            },
+                            "products/sharepoint plugin/server/sharepoint-server-solution-administration",
+                            "products/sharepoint plugin/server/sharepoint-server-solution-deployment",
+                            "products/sharepoint plugin/server/sharepoint-server-solution-uninstall"
+                        ]
+                    },
+                    {
+                        "type": "category",
+                        "label": "web",
+                        "items": [
+                            "products/sharepoint plugin/web/overview"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "category",
+        "label": "Websites",
+        "items": [
+            {
+                "type": "category",
+                "label": "gwfiledrop",
+                "items": []
+            },
+            {
+                "type": "category",
+                "label": "adarma",
+                "items": []
+            },
+            {
+                "type": "category",
+                "label": "bsigroup",
+                "items": []
+            },
+            {
+                "type": "category",
+                "label": "fortinet",
+                "items": []
+            },
+            {
+                "type": "category",
+                "label": "gov.uk",
+                "items": []
+            },
+            {
+                "type": "category",
+                "label": "gwengineering",
+                "items": []
+            },
+            {
+                "type": "category",
+                "label": "atlassian",
+                "items": []
+            },
+            {
+                "type": "category",
+                "label": "gwwebsite",
+                "items": []
+            },
+            {
+                "type": "category",
+                "label": "mastercard",
+                "items": []
+            },
+            {
+                "type": "category",
+                "label": "microsoft",
+                "items": []
+            },
+            {
+                "type": "category",
+                "label": "owasp",
+                "items": []
+            },
+            {
+                "type": "category",
+                "label": "sharepoint",
+                "items": []
+            },
+            {
+                "type": "category",
+                "label": "ukzones",
+                "items": [
+                    "websites/ukzones/overview"
+                ]
+            }
         ]
     }
 ]
