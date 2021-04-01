@@ -23,3 +23,11 @@
 - kb:
   - Knowledge Base: 4
 
+- products:
+  - Products: 5
+  - filedrop: File Drop
+  - icap server: ICAP Server
+  - sharepoint plugin: Sharepoint Plugin
+  - gw cloud sdk: GW Cloud SDK
+  - gw desktop app: GW Desktop App
+  - gw proxy: GW Proxy
