@@ -75,7 +75,9 @@ module.exports = {
             {
                 "type": "category",
                 "label": "GW Cloud SDK",
-                "items": []
+                "items": [
+                    "products/gw cloud sdk/overview"
+                ]
             },
             {
                 "type": "category",
