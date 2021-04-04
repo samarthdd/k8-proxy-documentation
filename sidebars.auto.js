@@ -51,16 +51,6 @@ module.exports = {
     },
     {
         "type": "category",
-        "label": "Knowledge Base",
-        "items": [
-            "kb/auto-sidebar",
-            "kb/mdx",
-            "kb/style-guide",
-            "kb/website-checklist"
-        ]
-    },
-    {
-        "type": "category",
         "label": "Products",
         "items": [
             {
@@ -82,12 +72,16 @@ module.exports = {
             {
                 "type": "category",
                 "label": "GW Desktop App",
-                "items": []
+                "items": [
+                    "products/gw desktop app/overview"
+                ]
             },
             {
                 "type": "category",
                 "label": "GW Proxy",
-                "items": []
+                "items": [
+                    "products/gw proxy/overview"
+                ]
             },
             {
                 "type": "category",
