@@ -87,13 +87,6 @@ module.exports = {
                 ]
             }
         ]
-    },
-    {
-        "type": "category",
-        "label": "Releases",
-        "items": [
-            "releases/releases"
-        ]
     }
 ]
 };
