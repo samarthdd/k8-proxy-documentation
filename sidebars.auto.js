@@ -18,7 +18,11 @@ module.exports = {
                 "type": "category",
                 "label": "GW Cloud SDK",
                 "items": [
-                    "products/gw cloud sdk/overview"
+                    "products/gw cloud sdk/a-overview",
+                    "products/gw cloud sdk/b-endpoints",
+                    "products/gw cloud sdk/c-fd-integration",
+                    "products/gw cloud sdk/d-desktp-integration",
+                    "products/gw cloud sdk/deployment"
                 ]
             },
             {
