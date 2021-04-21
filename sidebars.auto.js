@@ -21,7 +21,7 @@ module.exports = {
                     "products/gw cloud sdk/a-overview",
                     "products/gw cloud sdk/b-endpoints",
                     "products/gw cloud sdk/c-fd-integration",
-                    "products/gw cloud sdk/d-desktp-integration",
+                    "products/gw cloud sdk/d-desktop-integration",
                     "products/gw cloud sdk/deployment"
                 ]
             },
