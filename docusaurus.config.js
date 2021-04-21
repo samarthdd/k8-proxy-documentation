@@ -1,5 +1,5 @@
 module.exports = {
-  title: "K8 Proxy Documentation",
+  title: "Documentation",
   tagline: "",
   url: "https://k8-proxy.github.io",
   baseUrl: "/k8-proxy-documentation/",
@@ -13,7 +13,7 @@ module.exports = {
       indexName: 'k8-proxy'    
     },
     navbar: {
-      title: "K8 Proxy Documentation",
+      title: "Documentation",
       logo: {
         alt: "Glasswall Logo",
         src: "img/glasswall_logo_blue.png"
