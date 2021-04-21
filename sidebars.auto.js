@@ -3,54 +3,6 @@ module.exports = {
   docs: [
     {
         "type": "category",
-        "label": "Dashboards",
-        "items": [
-            {
-                "type": "category",
-                "label": "Client Welcome",
-                "items": []
-            },
-            {
-                "type": "category",
-                "label": "Websites",
-                "items": []
-            }
-        ]
-    },
-    {
-        "type": "category",
-        "label": "ESXI",
-        "items": [
-            {
-                "type": "category",
-                "label": "Websites",
-                "items": [
-                    {
-                        "type": "category",
-                        "label": "OWASP",
-                        "items": []
-                    },
-                    {
-                        "type": "category",
-                        "label": "glasswall-solutions",
-                        "items": []
-                    }
-                ]
-            },
-            {
-                "type": "category",
-                "label": "Welcome",
-                "items": []
-            },
-            {
-                "type": "category",
-                "label": "Architecture",
-                "items": []
-            }
-        ]
-    },
-    {
-        "type": "category",
         "label": "Products",
         "items": [
             {
@@ -135,6 +87,11 @@ module.exports = {
                 ]
             }
         ]
+    },
+    {
+        "type": "category",
+        "label": "releases summary",
+        "items": []
     }
 ]
 };
