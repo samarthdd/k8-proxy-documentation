@@ -90,8 +90,10 @@ module.exports = {
     },
     {
         "type": "category",
-        "label": "releases summary",
-        "items": []
+        "label": "Releases",
+        "items": [
+            "releases/releases"
+        ]
     }
 ]
 };
