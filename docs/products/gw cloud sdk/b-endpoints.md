@@ -6,7 +6,7 @@ sidebar_label: Endpoints
 ## Glasswall File Rebuild Product API (Swagger)
 https://k8-proxy.github.io/cs-k8s-api/#/
 
-## Endpoints
+## Endpoints available
 
 | API Endpoint | Method | Description | 
 |------|---------|---------    |
@@ -19,5 +19,3 @@ https://k8-proxy.github.io/cs-k8s-api/#/
 |/api/analyse/base64|POST|Analyse a file using the Base64 encoded representation|
 |/api/analyse/xmlreport|GET|Returns a xml report file using its FileId|
 |/api/analyse/rebuildzip|GET|Returns a zip file with all available data using its FileId|
-
-## Detailed API Endpoints Documentation - [ Link ](https://github.com/k8-proxy/cs-k8s-api/blob/refactor/ApiEndpointsDocumentation.md)
