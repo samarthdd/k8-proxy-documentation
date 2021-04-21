@@ -1,6 +1,6 @@
 ---
-title: GW Cloud SDK Deployment
-sidebar_label: GW Cloud SDK Deployment
+title: Deployment
+sidebar_label: Deployment
 ---
 
 

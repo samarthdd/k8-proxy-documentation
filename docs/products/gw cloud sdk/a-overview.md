@@ -1,6 +1,6 @@
 ---
-title: GW Cloud SDK Overview
-sidebar_label: GW Cloud SDK Overview
+title: Overview
+sidebar_label: Overview
 ---
 
 # Introduction
@@ -28,9 +28,11 @@ The project is about a Kubernetes service that can be added to ICAP infrastructu
 
 ![image](https://user-images.githubusercontent.com/60857664/115525847-c4295c00-a28f-11eb-9754-6cd5b945f138.png)
 
+## Glasswall Cloud SDK with Compliant Kubernetes
 
-# Glasswall File Rebuild Product API (Swagger)
-https://k8-proxy.github.io/cs-k8s-api/#/
+![image](https://user-images.githubusercontent.com/60857664/115548813-2f7f2800-a2a8-11eb-8ba3-e7569db39fe0.png)
+
+
 
 # Demos
 

@@ -1,6 +1,6 @@
 ---
-title: FileDrop with Glasswall Cloud SDK
-sidebar_label: FileDrop with Glasswall Cloud SDK
+title: FileDrop Integration
+sidebar_label: FileDrop Integration
 ---
 
 ![image](https://user-images.githubusercontent.com/60857664/115526387-4154d100-a290-11eb-8876-357a22900a0d.png)
