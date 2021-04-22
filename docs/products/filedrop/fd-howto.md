@@ -16,3 +16,8 @@ sidebar_label: How to use File Drop
 - Report can be downloaded in XML format
 - Rebuilt (clean) file can be downloaded. 
 
+
+
+![image](https://user-images.githubusercontent.com/60857664/115734125-be17a600-a389-11eb-84c0-2a87ede17cc8.png)
+
+
