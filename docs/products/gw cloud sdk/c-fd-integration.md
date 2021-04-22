@@ -45,7 +45,7 @@ wizard
 - Verify that correct IP address is set by running ip -4 a and verifying IP for eth0
 
 4.- Launch FileDrop
-  - Give the VM ~10 minutes to initialize, then open your browser and access FileDrop UI on http://<VM IP>
+  - Give the VM ~10 minutes to initialize, then open your browser and access FileDrop UI on `http://<VM IP>`
 
 ![image](https://user-images.githubusercontent.com/64204445/115719738-03dc6a80-a39a-11eb-93d0-39597d65e6ee.png)
 
