@@ -19,12 +19,7 @@ module.exports = {
         src: "img/glasswall_logo_blue.png"
       },
       items: [
-        {
-          to: "docs/products",
-          activeBasePath: "docs",
-          label: "Documentation",
-          position: "left",
-        },       
+            
         {
           href: "https://github.com/k8-proxy",
           label: "GitHub",
