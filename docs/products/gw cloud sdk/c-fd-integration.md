@@ -10,6 +10,7 @@ sidebar_label: FileDrop Integration
 ## Deploying OVA on ESXi: GW Cloud SDK compliant kubernetes with File Drop
 
 1.- Download OVA
+
 2.- Deploy OVA on VMware ESXi
   - From left bar navigate to Virtual machines
   - From top bar on the right choose Create / Register VM
