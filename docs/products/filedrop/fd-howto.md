@@ -17,7 +17,5 @@ sidebar_label: How to use File Drop
 
 
 
-| ![File Drop UI](https://user-images.githubusercontent.com/60857664/108224864-06290b00-7144-11eb-95fb-7c42f157741f.png) | 
-|:--:| 
-| *File Drop UI* |
+![image](https://user-images.githubusercontent.com/60857664/115734125-be17a600-a389-11eb-84c0-2a87ede17cc8.png)
 
