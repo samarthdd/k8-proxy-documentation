@@ -6,7 +6,7 @@ sidebar_label: Overview
 # Introduction
 
 ## Overview
-The project is about a Kubernetes service that can be added to ICAP infrastructure to provide access to Glasswall Solutions file rebuild service through RESTful APIs
+GW Cloud SDK is a Kubernetes service that can be added to ICAP infrastructure to provide access to Glasswall Solutions file rebuild service through RESTful APIs.
 
 ## Architecture Overview
 - Implemented as a K8s service

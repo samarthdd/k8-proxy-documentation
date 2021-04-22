@@ -3,36 +3,55 @@ title: FileDrop Integration
 sidebar_label: FileDrop Integration
 ---
 
+
 ![image](https://user-images.githubusercontent.com/60857664/115526387-4154d100-a290-11eb-8876-357a22900a0d.png)
 
 
-## Integration of Glasswall Cloud SDK with FileDrop
-- Clone Repo
+## Deploying OVA on ESXi: GW Cloud SDK compliant kubernetes with File Drop
 
-    ```
-    git clone https://github.com/k8-proxy/k8-rebuild-file-drop
-    cd k8-rebuild-file-drop/app
-    ```
-- Edit Dockerfile 
-    ```
-    vim Dockerfile
-    ```
-- Update endpoints with c# api endpoints in below three lines
-    ```
-    ARG REACT_APP_ANALYSE_API_ENDPOINT='http://<ip>:<port>'
-    ARG REACT_APP_FILETYPEDETECTION_API_ENDPOINT='http://<ip>:<port>'
-    ARG REACT_APP_REBUILD_API_ENDPOINT='http://<ip>:<port>'
-    ```
-- Run : `docker build -t k8-rebuild-file-drop .`
-- Run: `docker run -it --rm -p 80:80 k8-rebuild-file-drop`
-- Open the `http://localhost` in your Browser
-- You will be able to see File Drop, React App web interface
+1.- Download OVA
 
-    ![image](https://user-images.githubusercontent.com/60857664/115526603-7f51f500-a290-11eb-8ff7-6d9d7cc8c3e7.png)
+2.- Deploy OVA on VMware ESXi
+  - From left bar navigate to Virtual machines
+  - From top bar on the right choose Create / Register VM
+  - Choose Deploy a virtual machine from OVF or OVA file
+  - Type VM name
+  - Click on section Click to select files or drag/drop and select the downloaded OVA file
+  - Select desired storage and optionally tweak VM configuration
+  - Before importing, uncheck the box for Power on automatically
+  - Click on Actions > Edit Settings > Increase the following (16GB RAM, 8 Cores, 50 GB disk)
+  - Wait for the import to finish
+  - Once VM is imported, click on the VM name
+
+![image](https://user-images.githubusercontent.com/64204445/115719302-96c8d500-a399-11eb-8d6e-c8a506ed22c7.png)
+
+3.- Configure IP and credentials
+  - Click on Console in top left corner and select "Open browser console"
+  - Login to VM using provided credentials
+  - Change network configuration by running network wizard:
+```
+wizard
+```
+  - Add IP, Gateway and DNS addresses
+    - Note: Use bottom arrow to navigate through these 3 fields and tab to move to Submit button
+    - Note: To set up your OVA without internet access, for DNS, enter the same IP as your VM IP.
+
+![image](https://user-images.githubusercontent.com/64204445/115719636-ec04e680-a399-11eb-8ec0-3a37b1c5d267.png)
+
+![image](https://user-images.githubusercontent.com/64204445/115719445-b7912a80-a399-11eb-9e38-619c622fb2e5.png)
+
+- Important note: After the IP change wizard will return to the same window, navigate back to CMD by pressing Cancel
+- If needed you can use wizard to change password by selecting Change password
+- Verify that correct IP address is set by running ip -4 a and verifying IP for eth0
+
+4.- Launch FileDrop
+  - Give the VM ~10 minutes to initialize, then open your browser and access FileDrop UI on http://<VM IP>
+
+![image](https://user-images.githubusercontent.com/64204445/115719738-03dc6a80-a39a-11eb-93d0-39597d65e6ee.png)
 
 
-- How to use file-drop [ Link ](https://github.com/k8-proxy/glasswall-servers-eval/wiki/How-to-use-File-Drop)
 
+## How to use FileDrop
 
-Note : To Deploy in AWS, an AMI needs to be created with above setup.
+- How to use file-drop [ Link ](https://k8-proxy.github.io/k8-proxy-documentation/docs/products/filedrop/fd-howto)
 
