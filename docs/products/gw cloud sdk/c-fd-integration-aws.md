@@ -3,8 +3,11 @@ title: FileDrop Integration AWS
 sidebar_label: FileDrop Integration AWS
 ---
 
+## Architecture
+![image](https://user-images.githubusercontent.com/60857664/115548813-2f7f2800-a2a8-11eb-8ba3-e7569db39fe0.png)
 
-## Deploying AMI: GW Cloud SDK compliant kubernetes with File Drop
+
+## Deploying Workload cluster AMI: GW Cloud SDK compliant kubernetes with File Drop
 
 1.- Navigate to AWS > AMIs
 
