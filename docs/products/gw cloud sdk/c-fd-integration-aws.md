@@ -57,7 +57,7 @@ sidebar_label: FileDrop Integration AWS
     - Select `Create or use existing key pair` [Note: Your key pair is important for SSH]
     - Wait for instance to be initialized (~10 minutes) and use public IP to access File Drop web interface
 
-## Instructions to integrate Service Cluster and Workload Cluster of Complaint K8 Cloud SDK
+### Instructions to integrate Service Cluster and Workload Cluster of Complaint K8 Cloud SDK
 1.- Login to GW SDK CK8s (with Filedrop integrated) CM using SSH and navigate to `/home/ubuntu` and switch to root by `sudo su`
 2.- Verify presence of below files by issuing command `ls`
    ```
