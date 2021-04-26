@@ -48,7 +48,6 @@ sidebar_label: FileDrop Integration AWS
     - From AMIs workspace click on specific AMI > Choose `Launch` 
     - Set instance type to `t3.xlarge` (8CPUs and 32GB RAM)
     - Skip configuring Instance details and adding the storage (that can be left default if not specified differently)
-    - Add any tags if needed
     - Security Group: 
       - Create a new security group > Add Rule:
         - HTTP > Port 80 
@@ -61,7 +60,7 @@ sidebar_label: FileDrop Integration AWS
     - Wait for instance to be initialized (~10 minutes) and use public IP to access File Drop web interface
 
 ### Instructions to integrate Service Cluster and Workload Cluster of Complaint K8 Cloud SDK
-1.- Login to GW SDK CK8s (with Filedrop integrated) CM using SSH and navigate to `/home/ubuntu` and switch to root by `sudo su`
+1.- Login to Workload cluster (GW SDK with Filedrop integrated deployed above) using SSH and navigate to `/home/ubuntu` and switch to root by `sudo su`
 2.- Verify presence of below files by issuing command `ls`
    ```
     /home/ubuntu/monitoring-username.txt
@@ -95,10 +94,11 @@ sidebar_label: FileDrop Integration AWS
     `chmod +x setupscCluster.sh`
 - Execute setupscCluster by below command:
     `./setupscCluster.sh`
-- Wait for all commands to complete. Once completed, login to Grafana and Kibana in service cluster
-    `http://<service-cluster-ip>:5601/  - Kibana`
-    `http://<service-cluster-ip>:3000/  - Grafana`
+
+Wait for all commands to complete. Once completed, login to Grafana and Kibana in service cluster
+    http://<service-cluster-ip>:5601/  - Kibana
+    http://<service-cluster-ip>:3000/  - Grafana
 
     Username: `admin`
-    Password: `Will be shared as part of delivery`
+    Password: `Will be shared as part of delivery
 
