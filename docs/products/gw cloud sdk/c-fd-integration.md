@@ -1,6 +1,6 @@
 ---
-title: FileDrop Integration
-sidebar_label: FileDrop Integration
+title: FileDrop Integration ESXi
+sidebar_label: FileDrop Integration ESXi
 ---
 
 
