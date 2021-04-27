@@ -37,7 +37,7 @@ sidebar_label: FileDrop Integration AWS
 
 ## How to use FileDrop
 
-- How to use file-drop [ Link ](https://k8-proxy.github.io/EAP-documentation/docs/products/filedrop/fd-howto)
+- How to use file-drop [ Link ](https://k8-proxy.github.io/k8-proxy-documentation/docs/products/filedrop/fd-howto)
 
 
 ## Deploying Service cluster (Monitoring cluster)
