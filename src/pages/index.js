@@ -71,7 +71,7 @@ function Home() {
                 'button button--outline button--secondary button--lg',
                 styles.getStarted,
               )}
-              to={useBaseUrl('docs/products/filedrop/fd-aws')}>
+              to={useBaseUrl('docs/products/a-main')}>
               Get Started
             </Link>
           </div>

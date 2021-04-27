@@ -5,6 +5,7 @@ module.exports = {
         "type": "category",
         "label": "Products",
         "items": [
+            "products/a-main",
             {
                 "type": "category",
                 "label": "File Drop",
