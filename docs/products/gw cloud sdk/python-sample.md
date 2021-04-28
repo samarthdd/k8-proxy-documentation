@@ -1,6 +1,6 @@
 ---
 title: Python & php Code Sample
-sidebar_label: Python Code Sample
+sidebar_label: Python & php Code Sample
 ---
 ---
 # Python
