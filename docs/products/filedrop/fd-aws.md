@@ -3,7 +3,7 @@ title: Deploying File Drop on AWS
 sidebar_label: Deploying File Drop on AWS
 ---
 
-## Installation Video 
+## Installation video 
 - Installation Video (OVA)
 
 [![Installation Video (OVA)](https://img.youtube.com/vi/yaBPLn9ISSg/hqdefault.jpg)](https://www.youtube.com/watch?v=yaBPLn9ISSg&feature=youtu.be)
@@ -18,7 +18,7 @@ sidebar_label: Deploying File Drop on AWS
 - File Drop AMI ID 
 - File Drop OVA S3 URL
 
-## Setup AWS Access
+## Setup AWS access
 
 - Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) on your local machine
 
@@ -35,6 +35,15 @@ sidebar_label: Deploying File Drop on AWS
         - To verify AWS CLI was installed succesufully open CMD and run: aws --version
         - Result should be like: aws-cli/2.1.1 Python/3.7.4 Windows/10 botocore/2.0.0
         ```
+    - AWS CLI installation [MAC](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-mac.html):
+        ```
+        - Download latest macOS pkg file: https://awscli.amazonaws.com/AWSCLIV2.pkg
+        - Double-click the downloaded file to launch the installer & follow instructions
+        - To verify installation, open terminal and run
+         - `which aws` output would be   `/usr/local/bin/aws` 
+         - `aws --version` output would be `aws-cli/2.1.29 Python/3.7.4 Darwin/18.7.0 botocore/2.0.0`
+
+        ```
 
 - [Setup AWS Console access](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)
     - From CMD run: `aws configure`. 
@@ -46,7 +55,7 @@ sidebar_label: Deploying File Drop on AWS
             Default region name [None]: eu-west-1
             Default output format [None]: json
         ```
-- If your have MFA token enabled for authentication to AWS account, you should [set up MFA token authenticate through AWS CLI](https://aws.amazon.com/premiumsupport/knowledge-center/authenticate-mfa-cli/)
+- If your have MFA token enabled for authentication to AWS account you should [set up MFA token authenticate through AWS CLI](https://aws.amazon.com/premiumsupport/knowledge-center/authenticate-mfa-cli/)
     - Run: `aws sts get-session-token --serial-number arn-of-the-mfa-device --token-code code-from-token`
     - Replace arn-of-the-mfa-device with your username and AWS number and enter MFA code as code-from-token 
     - Then export keys
