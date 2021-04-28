@@ -2,7 +2,6 @@
 title: Python & php Code Sample
 sidebar_label: Python & php Code Sample
 ---
----
 # Python
 
 The following code snippets are examples of calling the Rebuild API using Python. The requests library is used to execute calls to the API.
