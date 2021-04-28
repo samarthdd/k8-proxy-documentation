@@ -19,7 +19,7 @@ $json_data = json_encode($data);
 $context = stream_context_create([
     'http' => [
         'method' => 'POST',
-        'header' => "Authorization: Bearer " . $jwt_token . "\r\n" .
+        'header' => "Authorization: " . $jwt_token . "\r\n" .
             "Content-type: application/json\r\n" .
             "Accept: application/json\r\n" .
             "Connection: close\r\n" .
