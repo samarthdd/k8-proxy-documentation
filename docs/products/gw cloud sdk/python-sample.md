@@ -158,7 +158,7 @@ The rebuilt file is returned as Base64, decoded by the client and written to dis
 ```
 <?php
 $jwt_token = "YOUR_JWT_TOKEN";
-$url = "https://gzlhbtpvk2.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file";
+url = "https://<host>:<port>/api/rebuild/base64"
 // local file
 $Input_File = 'YOUR/INPUT/FILE.docx';
 $output_file_path = "YOUR/OUTPUT/FILE.docx";
