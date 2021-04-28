@@ -107,9 +107,8 @@ sidebar_label: FileDrop Integration AWS
 
 8. Wait for all commands to complete. Once completed, login to Grafana and Kibana in service cluster
 
-    http://<service-cluster-ip>:5601/  - Kibana
-    http://<service-cluster-ip>:3000/  - Grafana
+   `http://<service-cluster-ip>:5601/ ` - Kibana   
+    `http://<service-cluster-ip>:3000/`  - Grafana
 
     Username: `admin`
-    Password: `Will be shared as part of delivery
-
+    Password: `Will be shared as part of delivery`
