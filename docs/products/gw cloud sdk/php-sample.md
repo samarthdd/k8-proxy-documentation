@@ -1,3 +1,16 @@
+---
+title: php Code Sample
+sidebar_label: php Code Sample
+---
+# php
+
+The following code snippets are examples of calling the Rebuild API using php. The requests library is used to execute calls to the API.
+
+## api/rebuild/base64
+​In this example files are loaded from the OS and a request with the content type of 'application/json' is formed. The request is then sent to the API using the POST method. The JSON body also contains the content management flags.
+
+The rebuilt file is returned as Base64, decoded by the client and written to disk.
+```
 <?php
 $jwt_token = "YOUR_JWT_TOKEN";
 $url = "https://gzlhbtpvk2.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file";
