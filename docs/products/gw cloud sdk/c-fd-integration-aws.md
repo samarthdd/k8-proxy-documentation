@@ -9,14 +9,14 @@ sidebar_label: FileDrop Integration AWS
 
 ## Deploying Workload cluster AMI: GW Cloud SDK compliant kubernetes with File Drop
 
-1.- Navigate to AWS > AMIs
+1. Navigate to AWS > AMIs
 
-2.- Search for the AMI with specific ID (make sure you are in the correct region)
+2. Search for the AMI with specific ID (make sure you are in the correct region)
 
-3.- Instance can be launch from AMIs or EC2 space
+3. Instance can be launched from AMIs or EC2 space
 - From AMIs workspace click on specific AMI > Choose `Launch` 
     - Set instance type to `t3.2xlarge` (8CPUs and 32GB RAM)
-    - Skip configuring Instance details and adding the storage (that can be left default if not specified differently)
+    - Skip configuring instance details and adding the storage (that can be left default if not specified differently)
     - Add any tags if needed
     - Security Group: 
       - Create a new security group > Add Rule:
@@ -27,9 +27,9 @@ sidebar_label: FileDrop Integration AWS
     - Click on `Review and Launch`
     - Select `Create or use existing key pair` [Note: Your key pair is important for SSH]
  
- 4.- Give the instance ~10 minutes to initialize, then open your browser and access FileDrop UI on `http://<VM IP>`
+ 4. Give the instance ~10 minutes to initialize, then open your browser and access FileDrop UI on `http://<VM IP>`
 
- 5.- Launch FileDrop
+ 5. Launch FileDrop
 
 ![image](https://user-images.githubusercontent.com/64204445/115719738-03dc6a80-a39a-11eb-93d0-39597d65e6ee.png)
 
@@ -37,17 +37,19 @@ sidebar_label: FileDrop Integration AWS
 
 ## How to use FileDrop
 
-- How to use file-drop [ Link ](https://k8-proxy.github.io/k8-proxy-documentation/docs/products/filedrop/fd-howto)
+- You can find information on how to use File Drop [ here ](https://k8-proxy.github.io/k8-proxy-documentation/docs/products/filedrop/fd-howto).
 
 
 ## Deploying Service cluster (Monitoring cluster)
 
-1.- Navigate to AWS > AMIs
-2.- Search for the AMI with specific ID (make sure you are in the correct region)
-3.- Instance can be launch from AMIs or EC2 space
-    - From AMIs workspace click on specific AMI > Choose `Launch` 
+1. Navigate to AWS > AMIs
+
+2. Search for the AMI with specific ID (make sure you are in the correct region)
+
+3. Instance can be launched from AMIs or EC2 space
+- From AMIs workspace click on specific AMI > Choose `Launch` 
     - Set instance type to `t3.xlarge` (8CPUs and 32GB RAM)
-    - Skip configuring Instance details and adding the storage (that can be left default if not specified differently)
+    - Skip configuring instance details and adding the storage (that can be left default if not specified differently)
     - Security Group: 
       - Create a new security group > Add Rule:
         - HTTP > Port 80 
@@ -60,9 +62,9 @@ sidebar_label: FileDrop Integration AWS
     - Wait for instance to be initialized (~10 minutes) and use public IP to access File Drop web interface
 
 ### Instructions to integrate Service Cluster and Workload Cluster of Complaint K8 Cloud SDK
-1.- Login to Workload cluster (GW SDK with Filedrop integrated deployed above) using SSH and navigate to `/home/ubuntu` and switch to root by `sudo su`
+1. Login to Workload cluster (GW SDK with Filedrop integrated deployed above) using SSH and navigate to `/home/ubuntu` and switch to root by `sudo su`
 
-2.- Verify presence of below files by issuing command `ls`
+2. Verify presence of below files by issuing command `ls`
 
 >     /home/ubuntu/monitoring-username.txt
 >     /home/ubuntu/monitoring-password.txt
@@ -75,15 +77,15 @@ sidebar_label: FileDrop Integration AWS
 >     /home/ubuntu/setupscCluster.sh
 
 
-3.- In case you are missing `wc-coredns-configmap.yml`, `setupscCluster.sh` run: 
+3. In case you are missing `wc-coredns-configmap.yml`, `setupscCluster.sh` run: 
    ```
    wget https://raw.githubusercontent.com/k8-proxy/vmware-scripts/cs-api-ck8/packer/wc-coredns-configmap.yml
    wget https://raw.githubusercontent.com/k8-proxy/vmware-scripts/cs-api-ck8/packer/setupscCluster.sh
    ```
 
-4.- In case you are missing the rest of the files also create and edit them (using vi/vim) with values as shown below
+4. In case you are missing the rest of the files, also create and edit them (using vi/vim) with values as shown below
 
-5.- Update each text file with corresponding values:
+5. Update each text file with corresponding values:
 
 ```
     monitoring-username.txt - wcWriter
@@ -95,13 +97,15 @@ sidebar_label: FileDrop Integration AWS
     cluster.txt - <Unique Identifier of workload instance> E.g., GWSDKWC01
 ```
 
-6.- Change permission of `setupscCluster.sh` by below command:
+6. Change permission of `setupscCluster.sh` by below command:
+
     `chmod +x setupscCluster.sh`
 
-7.- Execute setupscCluster by below command:
+7. Execute setupscCluster by below command:
+
     `./setupscCluster.sh`
 
-8.- Wait for all commands to complete. Once completed, login to Grafana and Kibana in service cluster
+8. Wait for all commands to complete. Once completed, login to Grafana and Kibana in service cluster
 
     http://<service-cluster-ip>:5601/  - Kibana
     http://<service-cluster-ip>:3000/  - Grafana
