@@ -1,7 +1,8 @@
 ---
-title: Python & php Code Sample
-sidebar_label: Python & php Code Sample
+title: Python Code Sample
+sidebar_label: Python Code Sample
 ---
+
 # Python
 
 The following code snippets are examples of calling the Rebuild API using Python. The requests library is used to execute calls to the API.
@@ -105,6 +106,7 @@ for root, dirs, files in os.walk(directory):
                 f.write(response.content)
 ```
 
+
 ## api/rebuild/zipfile
 
 In this example the contents of the zip file are uploaded in a body with a content type of 'application/zip'.
@@ -146,6 +148,7 @@ for root, dirs, files in os.walk(directory):
                 f.write(response.content)
 ```
 
+
 # php
 
 The following code snippets are examples of calling the Rebuild API using php. The requests library is used to execute calls to the API.
@@ -154,6 +157,7 @@ The following code snippets are examples of calling the Rebuild API using php. T
 ​In this example files are loaded from the OS and a request with the content type of 'application/json' is formed. The request is then sent to the API using the POST method. The JSON body also contains the content management flags.
 
 The rebuilt file is returned as Base64, decoded by the client and written to disk.
+
 ```
 <?php
 $jwt_token = "YOUR_JWT_TOKEN";
@@ -198,4 +202,4 @@ if (file_put_contents($output_file_path, $base64_string_output)) {
 } else {
     echo "File downloading failed.";
 }
-
+```
