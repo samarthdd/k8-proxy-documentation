@@ -38,7 +38,7 @@ sidebar_label: Deploying File Drop on ESXi
   ![Configure VM Network](https://user-images.githubusercontent.com/70108899/106206708-d29c3600-61c0-11eb-8887-39718e446e7b.png) 
 
 - **Important note**: After the IP change wizard will return to the same window, navigate back to CMD by pressing `Cancel` 
-- If needed you can use wizard to change password by selecting **Change password**
+- If needed, you can use wizard to change password by selecting **Change password**
 - Verify that correct IP address is set by running `ip -4 a` and verifying IP for `eth0`
 
 - Give the VM ~10 minutes to initialize, then open your browser and access FileDrop UI on `http://<VM IP>`
