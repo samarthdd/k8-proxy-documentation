@@ -3,7 +3,7 @@ title: Deploying File Drop on AWS
 sidebar_label: Deploying File Drop on AWS
 ---
 
-## Installation video 
+## Installation Video 
 - Installation Video (OVA)
 
 [![Installation Video (OVA)](https://img.youtube.com/vi/yaBPLn9ISSg/hqdefault.jpg)](https://www.youtube.com/watch?v=yaBPLn9ISSg&feature=youtu.be)
@@ -18,7 +18,7 @@ sidebar_label: Deploying File Drop on AWS
 - File Drop AMI ID 
 - File Drop OVA S3 URL
 
-## Setup AWS access
+## Setup AWS Access
 
 - Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) on your local machine
 
@@ -46,7 +46,7 @@ sidebar_label: Deploying File Drop on AWS
             Default region name [None]: eu-west-1
             Default output format [None]: json
         ```
-- If your have MFA token enabled for authentication to AWS account you should [set up MFA token authenticate through AWS CLI](https://aws.amazon.com/premiumsupport/knowledge-center/authenticate-mfa-cli/)
+- If your have MFA token enabled for authentication to AWS account, you should [set up MFA token authenticate through AWS CLI](https://aws.amazon.com/premiumsupport/knowledge-center/authenticate-mfa-cli/)
     - Run: `aws sts get-session-token --serial-number arn-of-the-mfa-device --token-code code-from-token`
     - Replace arn-of-the-mfa-device with your username and AWS number and enter MFA code as code-from-token 
     - Then export keys
