@@ -5,7 +5,7 @@ sidebar_label: GW Desktop Integration
 
 
 ## Integrate Glasswall Desktop App to GW SDK VM
-In order to Integrate Glasswall Desktop App Make sure Both of the Machine are on the same network subnet.
+In order to integrate Glasswall Desktop App, make sure both of the machines are on the same network subnet.
 
 Ignore Step 1 to Step 3 If you are already using `OfflineDesktop.ova`
 
@@ -33,7 +33,7 @@ REBUILD ENGINE URL = /api/rebuild/base64
 REBUILD ANALYSIS URL = /api/Analyse/base64
 ```
 
-Once you are done with the above setting you are using GW-SDK-VM now with Glasswall Desktop App to Process the files.
+Once you are done with the above setting, you are using GW-SDK-VM now with Glasswall Desktop App to process the files.
 
 ## GW Cloud SDK integration with GW Desktop video
 
