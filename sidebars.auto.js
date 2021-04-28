@@ -21,9 +21,12 @@ module.exports = {
                 "items": [
                     "products/gw cloud sdk/a-overview",
                     "products/gw cloud sdk/b-endpoints",
+                    "products/gw cloud sdk/c-fd-integration-aws",
                     "products/gw cloud sdk/c-fd-integration",
                     "products/gw cloud sdk/d-desktop-integration",
-                    "products/gw cloud sdk/deployment"
+                    "products/gw cloud sdk/deployment",
+                    "products/gw cloud sdk/php-sample",
+                    "products/gw cloud sdk/python-sample"
                 ]
             },
             {
