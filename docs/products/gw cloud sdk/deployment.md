@@ -31,17 +31,17 @@ Amazon CloudFormation launch Template is provided  in the repository to facilita
 
 2.- When prompted with the image below, click Next
 
-  ![Screenshot from 2021-03-25 17-13-06](https://user-images.githubusercontent.com/7603614/112506566-2fb20380-8d8e-11eb-9476-909cc8a751ed.png)
+![image](https://user-images.githubusercontent.com/70196799/116567174-aef3a380-a907-11eb-9354-69c3d3630eb2.png)
 
 3.- Enter `Stack name` (less than 20 characters)
 
-  ![Screenshot from 2021-03-25 17-13-45](https://user-images.githubusercontent.com/7603614/112506657-45bfc400-8d8e-11eb-91a9-59e3c0b558ef.png)
+![image](https://user-images.githubusercontent.com/70196799/116567268-c0d54680-a907-11eb-8b1e-8fe6c3665bfc.png)
 
  4.- Set **Credentials**:
 
   * `Service Cluster Key Name` and `Workload Cluster Key Name` to the names of key pairs (previously uploaded to AWS) that will be allowed to SSH into VMs
 
-    ![Screenshot from 2021-03-25 17-14-04](https://user-images.githubusercontent.com/7603614/112506741-55d7a380-8d8e-11eb-8627-8427d194eeed.png)
+![image](https://user-images.githubusercontent.com/70196799/116567312-ce8acc00-a907-11eb-8642-b1943a81c8d2.png)
 
   * `Logging Password`  Fluentd password
 
@@ -62,8 +62,7 @@ Amazon CloudFormation launch Template is provided  in the repository to facilita
   * `Load Balancer DNS Name` which stand in-front of the workload cluster instances and accept requests on port `8080`
   * `Service Cluster IP`  that exposes Grafana on port `3000` and Kibana on port `5601`
 
-  ![Screenshot from 2021-03-25 18-05-43](https://user-images.githubusercontent.com/7603614/112513618-ced9f980-8d94-11eb-9559-61cee07e7a93.png)
-
+![image](https://user-images.githubusercontent.com/70196799/116567382-dba7bb00-a907-11eb-9479-b36230e14ddb.png)
 
 ## Validate Deployment
 
