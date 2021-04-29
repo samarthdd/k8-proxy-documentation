@@ -35,7 +35,9 @@ sidebar_label: FileDrop Integration AWS
 
  6. Management UI: To access Management UI in your hosts file add:
  
- VM IP management-ui.glasswall-icap.com and access it from your Browser https://management-ui.glasswall-icap.com/login
+     ```
+     <VM IP> management-ui.glasswall-icap.com and access it from your Browser https://management-ui.glasswall-icap.com/login
+     ```
 
 
 ## How to use FileDrop
