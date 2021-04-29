@@ -43,7 +43,7 @@ response = requests.post(
 # convert base64 encoded bytes to string
 base64_string_output = response.content.decode()
 ​
-# metadata has been removed, base64 strings differ
+# metadata has been removed, ensure base64 strings are different
 assert base64_string_input != base64_string_output
 ​
 # decode base64 string to bytes
