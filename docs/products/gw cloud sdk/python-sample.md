@@ -5,7 +5,7 @@ sidebar_label: Python/PHP Code Sample
 
 # Python
 
-The following code snippets are examples of calling the Rebuild API using Python. The requests library is used to execute calls to the API.
+The following code snippets are examples of calling the GW Cloud SDK using Python. The requests library is used to execute calls to the API.
 
 ## api/rebuild/base64
 ​In this example files are loaded from the OS and a request with the content type of 'application/json' is formed. The request is then sent to the API using the POST method. The JSON body also contains the content management flags.
@@ -151,7 +151,7 @@ for root, dirs, files in os.walk(directory):
 
 # php
 
-The following code snippets are examples of calling the Rebuild API using php. The requests library is used to execute calls to the API.
+The following code snippets are examples of calling the GW Cloud SDK using php. The requests library is used to execute calls to the API.
 
 ## api/rebuild/base64
 ​In this example files are loaded from the OS and a request with the content type of 'application/json' is formed. The request is then sent to the API using the POST method. The JSON body also contains the content management flags.
@@ -189,7 +189,7 @@ $context = stream_context_create([
     ],
 
 ]);
-//Send a file to Glasswall's Rebuild API  endpoint, returns base64 encoded bytes
+//Send a file to Glasswall's GW Cloud SDK  endpoint, returns base64 encoded bytes
 $response = file_get_contents($url, false, $context);
 if ($response === false) {
     exit("Unable to get data at $url");

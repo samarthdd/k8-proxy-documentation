@@ -136,8 +136,8 @@ Following application settings of FileHandler web app configuration needs to be 
 2. AzureAd:ClientSecret - Client Secret created in App registered with Azure Active Directory 
 3. AzureAd:Domain - Domain of your O365 subscription. For e.g. glasswall.onmicrosoft.com.
 4. AzureAd:TenantId - Tenant id of your Azure Active Directory tenant.  
-5. Glasswall:BaseUrl - Base url of your Glasswall rebuild api endpoint. Make sure you are using valid URL.
-6. Glasswall:ApiKey - Api Key to access the Glasswall rebuild api (can be found [here](https://glasswall-store.com/products/glasswall-rebuild-cloud-in-shared-cloud-environment?variant=33739907006604)).
+5. Glasswall:BaseUrl - Base url of your Glasswall GW Cloud SDK endpoint. Make sure you are using valid URL.
+6. Glasswall:ApiKey - Api Key to access the Glasswall GW Cloud SDK (can be found [here](https://glasswall-store.com/products/glasswall-rebuild-cloud-in-shared-cloud-environment?variant=33739907006604)).
 
 #### 6. Deploy FileHandler Code
 1. Navigate to local folder where GWO365FileHandlerWebApp.zip was downloaded (from [FileHandler release](https://github.com/k8-proxy/gp-sharepoint-plugins/releases)).
@@ -169,7 +169,7 @@ az webapp deployment source config-zip --resource-group <group-name> --name <app
 4. Select any file. 
 5. Verify custom Download button is present. 
 6. Download the file.
-   - In case you are not able to **Download** file, verify that correct Glasswall Rebuild URL and Rebuild API are set in section 5.
+   - In case you are not able to **Download** file, verify that correct Glasswall Rebuild URL and GW Cloud SDK are set in section 5.
 8. Verify that downloaded file is rebuilt by Glasswall (you can upload file to `https://file-drop.co.uk` and verify it comes clean).
    - If the file is not rebuild correctly, the issue has to do with Glasswall Rebuild rather than solution provided.
 
