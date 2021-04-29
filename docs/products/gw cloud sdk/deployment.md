@@ -11,7 +11,7 @@ sidebar_label: Automated deployment CF
 Worker and service cluster AMIs are automatically created by running **CK8icap-GW_CloudSDK** workflow in GitHub Actions using Packer.
 Amazon CloudFormation launch Template is provided  in the repository to facilitate configuration of the deployment.
 
-### Launching with Click of Button
+### Launching by selecting a region below
 
 1.- To launch instances click on one of the Buttons below and follow the steps below:
 
@@ -66,4 +66,6 @@ Amazon CloudFormation launch Template is provided  in the repository to facilita
 
 
 ## Validate Deployment
+
+Follow these instructions to validate deployment: https://k8-proxy.github.io/k8-proxy-documentation/docs/products/gw%20cloud%20sdk/c-fd-integration-aws#validate-deployment and access FileDrop and the monitoring capabilities from the service cluster. 
 
