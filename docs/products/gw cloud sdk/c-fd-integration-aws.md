@@ -117,11 +117,11 @@ sidebar_label: FileDrop Integration AWS
     
         - `http://<service-cluster-ip>:5601/  - Kibana`
     
-        ![image](https://user-images.githubusercontent.com/70108899/116088990-afd7cb80-a6a2-11eb-96bf-31d2898b910e.png)
+![image](https://user-images.githubusercontent.com/70196799/116581348-86be7180-a914-11eb-9918-28bd100c49f7.png)
         
     - `http://<service-cluster-ip>:3000/  - Grafana`
     
-        ![image](https://user-images.githubusercontent.com/70108899/116088330-0f81a700-a6a2-11eb-970a-a0a4fbbd4823.png)
+![image](https://user-images.githubusercontent.com/70196799/116581366-8c1bbc00-a914-11eb-8efe-fd9131b67b62.png)
 
     Username: `admin`
     Password: `Will be shared as part of delivery`
