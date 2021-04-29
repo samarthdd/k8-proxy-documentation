@@ -19,7 +19,7 @@ import TabItem from '@theme/TabItem';
 The following code snippets are examples of calling the GW Cloud SDK using Python. The requests library is used to execute calls to the API.
 
 ## api/rebuild/base64
-​In this example files are loaded from the OS and a request with the content type of 'application/json' is formed. The request is then sent to the API using the POST method. The JSON body also contains the content management flags.
+​In this example, files are loaded from the OS and a request with the content type of 'application/json' is formed. The request is then sent to the API using the POST method. The JSON body also contains the content management flags.
 
 The rebuilt file is returned as Base64, decoded by the client and written to disk.
 
@@ -66,7 +66,7 @@ with open("data/doc/embedded_images_12kb_gwsanitised.docx", "wb") as f:
 
 ## api/rebuild/file
 
-In this example the contents of the raw file are uploaded in a body with a content type of 'multipart/form-data'. The content management flags are serialised and sent as part of the form.
+In this example, the contents of the raw file are uploaded in a body with a content type of 'multipart/form-data'. The content management flags are serialised and sent as part of the form.
 
 The rebuilt file contents are returned to the client and written to disk.
 
@@ -120,7 +120,7 @@ for root, dirs, files in os.walk(directory):
 
 ## api/rebuild/zipfile
 
-In this example the contents of the zip file are uploaded in a body with a content type of 'application/zip'.
+In this example, the contents of the zip file are uploaded in a body with a content type of 'application/zip'.
 
 The rebuilt file contents are returned to the client and written to disk.
 
@@ -168,7 +168,7 @@ for root, dirs, files in os.walk(directory):
 The following code snippets are examples of calling the GW Cloud SDK using php. The requests library is used to execute calls to the API.
 
 ## api/rebuild/base64 using php
-​In this example files are loaded from the OS and a request with the content type of 'application/json' is formed. The request is then sent to the API using the POST method. The JSON body also contains the content management flags.
+​In this example, files are loaded from the OS and a request with the content type of 'application/json' is formed. The request is then sent to the API using the POST method. The JSON body also contains the content management flags.
 
 The rebuilt file is returned as Base64, decoded by the client and written to disk.
 
