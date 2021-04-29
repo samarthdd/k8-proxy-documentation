@@ -49,11 +49,11 @@ Amazon CloudFormation launch Template is provided  in the repository to facilita
 
     The **Logging Password** & **Monitoring Password** are the elasticsearch.fluentdPassword & influxDB.wcWriterPassword Values respectively that are generated during the github action run which produced the used service cluster AMI. 
     
-  * **Service Cluster** specification mainly AMI ID and Instance size, make sure the AMI is the one generated in the same github action run where you get the logging and monitory passwords above.
+  5.- **Service Cluster** specification mainly AMI ID and Instance size, make sure the AMI is the one generated in the same github action run where you get the logging and monitory passwords above.
 
     ![image](https://user-images.githubusercontent.com/17300331/116555949-8fb24180-a91a-11eb-8e1c-4bb506755a86.png)
 
-  * **Workload Cluster** specification mainly AMI ID, Instance size and number of instances.
+  6.- **Workload Cluster** specification mainly AMI ID, Instance size and number of instances.
 
     ![image](https://user-images.githubusercontent.com/17300331/116556059-af496a00-a91a-11eb-8367-a03373ad08e2.png)
 
