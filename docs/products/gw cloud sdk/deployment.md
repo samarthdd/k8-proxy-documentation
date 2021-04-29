@@ -51,14 +51,14 @@ Amazon CloudFormation launch Template is provided  in the repository to facilita
     
   5.- **Service Cluster** specification mainly AMI ID and Instance size, make sure the AMI is the one generated in the same github action run where you get the logging and monitory passwords above.
 
-    ![image](https://user-images.githubusercontent.com/17300331/116555949-8fb24180-a91a-11eb-8e1c-4bb506755a86.png)
+![image](https://user-images.githubusercontent.com/70196799/116566431-0cd3bb80-a907-11eb-8952-5c768a886e2b.png)
 
   6.- **Workload Cluster** specification mainly AMI ID, Instance size and number of instances.
 
-    ![image](https://user-images.githubusercontent.com/17300331/116556059-af496a00-a91a-11eb-8367-a03373ad08e2.png)
+![image](https://user-images.githubusercontent.com/70196799/116566498-1ceb9b00-a907-11eb-8394-5ac9ab94eaec.png)
 
 
-* When the stack creation is complete, in the **Outputs** tab you can find:
+  7.- When the stack creation is complete, in the **Outputs** tab you can find:
   * `Load Balancer DNS Name` which stand in-front of the workload cluster instances and accept requests on port `8080`
   * `Service Cluster IP`  that exposes Grafana on port `3000` and Kibana on port `5601`
 
