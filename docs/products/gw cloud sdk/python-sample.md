@@ -3,6 +3,17 @@ title: Python/PHP Code Sample
 sidebar_label: Python/PHP Code Sample
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs
+  defaultValue="python"
+  values={[
+    {label: 'Python', value: 'python'},
+    {label: 'PHP', value: 'php'},
+  ]}>
+  <TabItem value="python">
+
 # Python
 
 The following code snippets are examples of calling the GW Cloud SDK using Python. The requests library is used to execute calls to the API.
@@ -148,8 +159,11 @@ for root, dirs, files in os.walk(directory):
                 f.write(response.content)
 ```
 
+  </TabItem>
 
-# php
+  <TabItem value="php">
+
+  # PHP
 
 The following code snippets are examples of calling the GW Cloud SDK using php. The requests library is used to execute calls to the API.
 
@@ -203,3 +217,10 @@ if (file_put_contents($output_file_path, $base64_string_output)) {
     echo "File downloading failed.";
 }
 ```
+
+
+  </TabItem>
+
+</Tabs>
+
+
