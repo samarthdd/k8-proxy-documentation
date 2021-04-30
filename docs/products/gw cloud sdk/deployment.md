@@ -68,6 +68,8 @@ Amazon CloudFormation launch Template is provided  in the repository to facilita
 
 ![image](https://user-images.githubusercontent.com/70196799/116567382-dba7bb00-a907-11eb-9479-b36230e14ddb.png)
 
+  8. Wait for instance to be initialized (~10 minutes)
+
 ## Validate Deployment
 
 Follow these instructions to validate deployment: https://k8-proxy.github.io/k8-proxy-documentation/docs/products/gw%20cloud%20sdk/c-fd-integration-aws#validate-deployment and access FileDrop and the monitoring capabilities from the service cluster. 
