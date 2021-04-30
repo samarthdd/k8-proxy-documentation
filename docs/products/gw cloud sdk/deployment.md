@@ -68,7 +68,7 @@ Amazon CloudFormation launch Template is provided  in the repository to facilita
 
 ![image](https://user-images.githubusercontent.com/70196799/116567382-dba7bb00-a907-11eb-9479-b36230e14ddb.png)
 
-  8. Wait for instance to be initialized (~10 minutes)
+  8. Wait for instances to be initialized (~10 minutes)
 
 ## Validate Deployment
 
