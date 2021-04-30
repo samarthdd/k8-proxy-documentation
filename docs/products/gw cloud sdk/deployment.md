@@ -6,6 +6,10 @@ sidebar_label: Automated deployment CF
 
 # Automated deployment - GW Cloud SDK with compliant kubernetes (worker and service cluster)
 
+## Prerequisites
+
+-  One aws `key-pair` in respective region
+
 ## Deployment instructions using AMI
 
 Worker and service cluster AMIs are automatically created by running **CK8icap-GW_CloudSDK** workflow in GitHub Actions using Packer.
