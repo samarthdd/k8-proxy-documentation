@@ -32,8 +32,9 @@ GW Cloud SDK is a Kubernetes service that can be added to ICAP infrastructure to
 
 ![image](https://user-images.githubusercontent.com/60857664/115548813-2f7f2800-a2a8-11eb-8ba3-e7569db39fe0.png)
 
----
+
 ## Supported File Types
+
 |File Types   |File Description   |
 |---|---|
 |PDF|Adobe Portable Document|
@@ -48,7 +49,6 @@ GW Cloud SDK is a Kubernetes service that can be added to ICAP infrastructure to
 |MPG MP4 |Video |
 |PE DLL MUI EXE MACH-0 COFF ELF |Portable executables |
 
----
 
 # Demos
 
